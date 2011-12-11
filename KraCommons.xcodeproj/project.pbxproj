@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000CE91814946E9B003002C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000CE91714946E9B003002C3 /* Foundation.framework */; };
+		000CE92F14946F24003002C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000CE92E14946F24003002C3 /* Cocoa.framework */; };
+		000CE93914946F24003002C3 /* KraCommons_x86.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE93814946F24003002C3 /* KraCommons_x86.m */; };
+		000CE93E14946F7D003002C3 /* KCBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE93D14946F7D003002C3 /* KCBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000CE93F14946F7D003002C3 /* KCBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE93D14946F7D003002C3 /* KCBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000CE94214946FB7003002C3 /* KCAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE94114946FB7003002C3 /* KCAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000CE94314946FB7003002C3 /* KCAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE94114946FB7003002C3 /* KCAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000CE947149470AE003002C3 /* KCKeyboardToolbarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE945149470AE003002C3 /* KCKeyboardToolbarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000CE948149470AE003002C3 /* KCKeyboardToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE946149470AE003002C3 /* KCKeyboardToolbarController.m */; };
+		000CE95014947101003002C3 /* KCDocumentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE94A14947101003002C3 /* KCDocumentStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000CE95114947101003002C3 /* KCDocumentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE94A14947101003002C3 /* KCDocumentStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000CE95214947101003002C3 /* KCDocumentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE94B14947101003002C3 /* KCDocumentStore.m */; };
+		000CE95314947101003002C3 /* KCDocumentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE94B14947101003002C3 /* KCDocumentStore.m */; };
+		000CE95414947101003002C3 /* KCDocumentStoreFileBackend.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE94C14947101003002C3 /* KCDocumentStoreFileBackend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000CE95514947101003002C3 /* KCDocumentStoreFileBackend.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE94C14947101003002C3 /* KCDocumentStoreFileBackend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000CE95614947101003002C3 /* KCDocumentStoreFileBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE94D14947101003002C3 /* KCDocumentStoreFileBackend.m */; };
+		000CE95714947101003002C3 /* KCDocumentStoreFileBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE94D14947101003002C3 /* KCDocumentStoreFileBackend.m */; };
+		000CE95814947101003002C3 /* KCDocumentStoreOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE94E14947101003002C3 /* KCDocumentStoreOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000CE95914947101003002C3 /* KCDocumentStoreOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE94E14947101003002C3 /* KCDocumentStoreOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000CE95A14947101003002C3 /* KCDocumentStoreOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE94F14947101003002C3 /* KCDocumentStoreOperation.m */; };
+		000CE95B14947101003002C3 /* KCDocumentStoreOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE94F14947101003002C3 /* KCDocumentStoreOperation.m */; };
+		000CE95F1494728F003002C3 /* UIImage+Retina.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE95D1494728F003002C3 /* UIImage+Retina.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000CE9601494728F003002C3 /* UIImage+Retina.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE95E1494728F003002C3 /* UIImage+Retina.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000CE91414946E9B003002C3 /* libKraCommons-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libKraCommons-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000CE91714946E9B003002C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		000CE91B14946E9B003002C3 /* KraCommons-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KraCommons-Prefix.pch"; sourceTree = "<group>"; };
+		000CE92D14946F24003002C3 /* libKraCommons-x86.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libKraCommons-x86.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000CE92E14946F24003002C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		000CE93114946F24003002C3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		000CE93214946F24003002C3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		000CE93314946F24003002C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		000CE93614946F24003002C3 /* KraCommons-x86-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KraCommons-x86-Prefix.pch"; sourceTree = "<group>"; };
+		000CE93714946F24003002C3 /* KraCommons_x86.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KraCommons_x86.h; sourceTree = "<group>"; };
+		000CE93814946F24003002C3 /* KraCommons_x86.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KraCommons_x86.m; sourceTree = "<group>"; };
+		000CE93D14946F7D003002C3 /* KCBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCBlocks.h; path = blocks/KCBlocks.h; sourceTree = "<group>"; };
+		000CE94114946FB7003002C3 /* KCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimation.h; sourceTree = "<group>"; };
+		000CE945149470AE003002C3 /* KCKeyboardToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKeyboardToolbarController.h; sourceTree = "<group>"; };
+		000CE946149470AE003002C3 /* KCKeyboardToolbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKeyboardToolbarController.m; sourceTree = "<group>"; };
+		000CE94A14947101003002C3 /* KCDocumentStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCDocumentStore.h; sourceTree = "<group>"; };
+		000CE94B14947101003002C3 /* KCDocumentStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCDocumentStore.m; sourceTree = "<group>"; };
+		000CE94C14947101003002C3 /* KCDocumentStoreFileBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCDocumentStoreFileBackend.h; sourceTree = "<group>"; };
+		000CE94D14947101003002C3 /* KCDocumentStoreFileBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCDocumentStoreFileBackend.m; sourceTree = "<group>"; };
+		000CE94E14947101003002C3 /* KCDocumentStoreOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCDocumentStoreOperation.h; sourceTree = "<group>"; };
+		000CE94F14947101003002C3 /* KCDocumentStoreOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCDocumentStoreOperation.m; sourceTree = "<group>"; };
+		000CE95D1494728F003002C3 /* UIImage+Retina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Retina.h"; sourceTree = "<group>"; };
+		000CE95E1494728F003002C3 /* UIImage+Retina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Retina.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000CE91114946E9B003002C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000CE91814946E9B003002C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000CE92A14946F24003002C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000CE92F14946F24003002C3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000CE90914946E9B003002C3 = {
+			isa = PBXGroup;
+			children = (
+				000CE91914946E9B003002C3 /* KraCommons */,
+				000CE93414946F24003002C3 /* KraCommons-x86 */,
+				000CE91614946E9B003002C3 /* Frameworks */,
+				000CE91514946E9B003002C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		000CE91514946E9B003002C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000CE91414946E9B003002C3 /* libKraCommons-iPhone.a */,
+				000CE92D14946F24003002C3 /* libKraCommons-x86.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000CE91614946E9B003002C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				000CE91714946E9B003002C3 /* Foundation.framework */,
+				000CE92E14946F24003002C3 /* Cocoa.framework */,
+				000CE93014946F24003002C3 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		000CE91914946E9B003002C3 /* KraCommons */ = {
+			isa = PBXGroup;
+			children = (
+				000CE94014946FB7003002C3 /* animations */,
+				000CE92814946EEB003002C3 /* blocks */,
+				000CE94914947101003002C3 /* DocumentStore */,
+				000CE95C1494728F003002C3 /* Image */,
+				000CE944149470AE003002C3 /* keyboard */,
+				000CE91A14946E9B003002C3 /* Supporting Files */,
+			);
+			path = KraCommons;
+			sourceTree = "<group>";
+		};
+		000CE91A14946E9B003002C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				000CE91B14946E9B003002C3 /* KraCommons-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		000CE92814946EEB003002C3 /* blocks */ = {
+			isa = PBXGroup;
+			children = (
+				000CE93D14946F7D003002C3 /* KCBlocks.h */,
+			);
+			name = blocks;
+			sourceTree = "<group>";
+		};
+		000CE93014946F24003002C3 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				000CE93114946F24003002C3 /* AppKit.framework */,
+				000CE93214946F24003002C3 /* CoreData.framework */,
+				000CE93314946F24003002C3 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		000CE93414946F24003002C3 /* KraCommons-x86 */ = {
+			isa = PBXGroup;
+			children = (
+				000CE93714946F24003002C3 /* KraCommons_x86.h */,
+				000CE93814946F24003002C3 /* KraCommons_x86.m */,
+				000CE93514946F24003002C3 /* Supporting Files */,
+			);
+			path = "KraCommons-x86";
+			sourceTree = "<group>";
+		};
+		000CE93514946F24003002C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				000CE93614946F24003002C3 /* KraCommons-x86-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		000CE94014946FB7003002C3 /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				000CE94114946FB7003002C3 /* KCAnimation.h */,
+			);
+			path = animations;
+			sourceTree = "<group>";
+		};
+		000CE944149470AE003002C3 /* keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				000CE945149470AE003002C3 /* KCKeyboardToolbarController.h */,
+				000CE946149470AE003002C3 /* KCKeyboardToolbarController.m */,
+			);
+			path = keyboard;
+			sourceTree = "<group>";
+		};
+		000CE94914947101003002C3 /* DocumentStore */ = {
+			isa = PBXGroup;
+			children = (
+				000CE94A14947101003002C3 /* KCDocumentStore.h */,
+				000CE94B14947101003002C3 /* KCDocumentStore.m */,
+				000CE94C14947101003002C3 /* KCDocumentStoreFileBackend.h */,
+				000CE94D14947101003002C3 /* KCDocumentStoreFileBackend.m */,
+				000CE94E14947101003002C3 /* KCDocumentStoreOperation.h */,
+				000CE94F14947101003002C3 /* KCDocumentStoreOperation.m */,
+			);
+			path = DocumentStore;
+			sourceTree = "<group>";
+		};
+		000CE95C1494728F003002C3 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				000CE95D1494728F003002C3 /* UIImage+Retina.h */,
+				000CE95E1494728F003002C3 /* UIImage+Retina.m */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		000CE91214946E9B003002C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000CE93E14946F7D003002C3 /* KCBlocks.h in Headers */,
+				000CE94214946FB7003002C3 /* KCAnimation.h in Headers */,
+				000CE947149470AE003002C3 /* KCKeyboardToolbarController.h in Headers */,
+				000CE95014947101003002C3 /* KCDocumentStore.h in Headers */,
+				000CE95414947101003002C3 /* KCDocumentStoreFileBackend.h in Headers */,
+				000CE95814947101003002C3 /* KCDocumentStoreOperation.h in Headers */,
+				000CE95F1494728F003002C3 /* UIImage+Retina.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000CE92B14946F24003002C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000CE93F14946F7D003002C3 /* KCBlocks.h in Headers */,
+				000CE94314946FB7003002C3 /* KCAnimation.h in Headers */,
+				000CE95114947101003002C3 /* KCDocumentStore.h in Headers */,
+				000CE95514947101003002C3 /* KCDocumentStoreFileBackend.h in Headers */,
+				000CE95914947101003002C3 /* KCDocumentStoreOperation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		000CE91314946E9B003002C3 /* KraCommons-iPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000CE92114946E9B003002C3 /* Build configuration list for PBXNativeTarget "KraCommons-iPhone" */;
+			buildPhases = (
+				000CE91014946E9B003002C3 /* Sources */,
+				000CE91114946E9B003002C3 /* Frameworks */,
+				000CE91214946E9B003002C3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KraCommons-iPhone";
+			productName = KraCommons;
+			productReference = 000CE91414946E9B003002C3 /* libKraCommons-iPhone.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		000CE92C14946F24003002C3 /* KraCommons-x86 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000CE93A14946F24003002C3 /* Build configuration list for PBXNativeTarget "KraCommons-x86" */;
+			buildPhases = (
+				000CE92914946F24003002C3 /* Sources */,
+				000CE92A14946F24003002C3 /* Frameworks */,
+				000CE92B14946F24003002C3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KraCommons-x86";
+			productName = "KraCommons-x86";
+			productReference = 000CE92D14946F24003002C3 /* libKraCommons-x86.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000CE90B14946E9B003002C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Edmunds;
+			};
+			buildConfigurationList = 000CE90E14946E9B003002C3 /* Build configuration list for PBXProject "KraCommons" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 000CE90914946E9B003002C3;
+			productRefGroup = 000CE91514946E9B003002C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000CE91314946E9B003002C3 /* KraCommons-iPhone */,
+				000CE92C14946F24003002C3 /* KraCommons-x86 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000CE91014946E9B003002C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000CE948149470AE003002C3 /* KCKeyboardToolbarController.m in Sources */,
+				000CE95214947101003002C3 /* KCDocumentStore.m in Sources */,
+				000CE95614947101003002C3 /* KCDocumentStoreFileBackend.m in Sources */,
+				000CE95A14947101003002C3 /* KCDocumentStoreOperation.m in Sources */,
+				000CE9601494728F003002C3 /* UIImage+Retina.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000CE92914946F24003002C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000CE93914946F24003002C3 /* KraCommons_x86.m in Sources */,
+				000CE95314947101003002C3 /* KCDocumentStore.m in Sources */,
+				000CE95714947101003002C3 /* KCDocumentStoreFileBackend.m in Sources */,
+				000CE95B14947101003002C3 /* KCDocumentStoreOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		000CE91F14946E9B003002C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		000CE92014946E9B003002C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000CE92214946E9B003002C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/KraCommons.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KraCommons/KraCommons-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = KraCommons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = KraCommons;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		000CE92314946E9B003002C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/KraCommons.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KraCommons/KraCommons-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = KraCommons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = KraCommons;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		000CE93B14946F24003002C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KraCommons-x86/KraCommons-x86-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRIVATE_HEADERS_FOLDER_PATH = KraCommons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = KraCommons;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		000CE93C14946F24003002C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KraCommons-x86/KraCommons-x86-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRIVATE_HEADERS_FOLDER_PATH = KraCommons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = KraCommons;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000CE90E14946E9B003002C3 /* Build configuration list for PBXProject "KraCommons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000CE91F14946E9B003002C3 /* Debug */,
+				000CE92014946E9B003002C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000CE92114946E9B003002C3 /* Build configuration list for PBXNativeTarget "KraCommons-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000CE92214946E9B003002C3 /* Debug */,
+				000CE92314946E9B003002C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000CE93A14946F24003002C3 /* Build configuration list for PBXNativeTarget "KraCommons-x86" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000CE93B14946F24003002C3 /* Debug */,
+				000CE93C14946F24003002C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000CE90B14946E9B003002C3 /* Project object */;
+}
