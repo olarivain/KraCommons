@@ -30,6 +30,18 @@
 		000CE95B14947101003002C3 /* KCDocumentStoreOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE94F14947101003002C3 /* KCDocumentStoreOperation.m */; };
 		000CE95F1494728F003002C3 /* UIImage+Retina.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE95D1494728F003002C3 /* UIImage+Retina.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		000CE9601494728F003002C3 /* UIImage+Retina.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE95E1494728F003002C3 /* UIImage+Retina.m */; };
+		0062B26E1495AA2B00160289 /* NSArray+BoundSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B2671495AA2B00160289 /* NSArray+BoundSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0062B26F1495AA2B00160289 /* NSArray+BoundSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B2671495AA2B00160289 /* NSArray+BoundSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0062B2701495AA2B00160289 /* NSArray+BoundSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B2681495AA2B00160289 /* NSArray+BoundSafe.m */; };
+		0062B2711495AA2B00160289 /* NSArray+BoundSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B2681495AA2B00160289 /* NSArray+BoundSafe.m */; };
+		0062B2721495AA2B00160289 /* NSMutableArray+NilSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B2691495AA2B00160289 /* NSMutableArray+NilSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0062B2731495AA2B00160289 /* NSMutableArray+NilSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B2691495AA2B00160289 /* NSMutableArray+NilSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0062B2741495AA2B00160289 /* NSMutableArray+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26A1495AA2B00160289 /* NSMutableArray+NilSafe.m */; };
+		0062B2751495AA2B00160289 /* NSMutableArray+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26A1495AA2B00160289 /* NSMutableArray+NilSafe.m */; };
+		0062B2761495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0062B2771495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0062B2781495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */; };
+		0062B2791495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +68,12 @@
 		000CE94F14947101003002C3 /* KCDocumentStoreOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCDocumentStoreOperation.m; sourceTree = "<group>"; };
 		000CE95D1494728F003002C3 /* UIImage+Retina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Retina.h"; sourceTree = "<group>"; };
 		000CE95E1494728F003002C3 /* UIImage+Retina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Retina.m"; sourceTree = "<group>"; };
+		0062B2671495AA2B00160289 /* NSArray+BoundSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BoundSafe.h"; sourceTree = "<group>"; };
+		0062B2681495AA2B00160289 /* NSArray+BoundSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BoundSafe.m"; sourceTree = "<group>"; };
+		0062B2691495AA2B00160289 /* NSMutableArray+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+NilSafe.h"; sourceTree = "<group>"; };
+		0062B26A1495AA2B00160289 /* NSMutableArray+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+NilSafe.m"; sourceTree = "<group>"; };
+		0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
+		0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				000CE94014946FB7003002C3 /* animations */,
+				0062B2661495AA2B00160289 /* Arrays */,
 				000CE92814946EEB003002C3 /* blocks */,
+				0062B26B1495AA2B00160289 /* Dictionaries */,
 				000CE94914947101003002C3 /* DocumentStore */,
 				000CE95C1494728F003002C3 /* Image */,
 				000CE944149470AE003002C3 /* keyboard */,
@@ -203,6 +223,26 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		0062B2661495AA2B00160289 /* Arrays */ = {
+			isa = PBXGroup;
+			children = (
+				0062B2671495AA2B00160289 /* NSArray+BoundSafe.h */,
+				0062B2681495AA2B00160289 /* NSArray+BoundSafe.m */,
+				0062B2691495AA2B00160289 /* NSMutableArray+NilSafe.h */,
+				0062B26A1495AA2B00160289 /* NSMutableArray+NilSafe.m */,
+			);
+			path = Arrays;
+			sourceTree = "<group>";
+		};
+		0062B26B1495AA2B00160289 /* Dictionaries */ = {
+			isa = PBXGroup;
+			children = (
+				0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */,
+				0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */,
+			);
+			path = Dictionaries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -217,6 +257,9 @@
 				000CE95414947101003002C3 /* KCDocumentStoreFileBackend.h in Headers */,
 				000CE95814947101003002C3 /* KCDocumentStoreOperation.h in Headers */,
 				000CE95F1494728F003002C3 /* UIImage+Retina.h in Headers */,
+				0062B26E1495AA2B00160289 /* NSArray+BoundSafe.h in Headers */,
+				0062B2721495AA2B00160289 /* NSMutableArray+NilSafe.h in Headers */,
+				0062B2761495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +272,9 @@
 				000CE95114947101003002C3 /* KCDocumentStore.h in Headers */,
 				000CE95514947101003002C3 /* KCDocumentStoreFileBackend.h in Headers */,
 				000CE95914947101003002C3 /* KCDocumentStoreOperation.h in Headers */,
+				0062B26F1495AA2B00160289 /* NSArray+BoundSafe.h in Headers */,
+				0062B2731495AA2B00160289 /* NSMutableArray+NilSafe.h in Headers */,
+				0062B2771495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +352,9 @@
 				000CE95614947101003002C3 /* KCDocumentStoreFileBackend.m in Sources */,
 				000CE95A14947101003002C3 /* KCDocumentStoreOperation.m in Sources */,
 				000CE9601494728F003002C3 /* UIImage+Retina.m in Sources */,
+				0062B2701495AA2B00160289 /* NSArray+BoundSafe.m in Sources */,
+				0062B2741495AA2B00160289 /* NSMutableArray+NilSafe.m in Sources */,
+				0062B2781495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +366,9 @@
 				000CE95314947101003002C3 /* KCDocumentStore.m in Sources */,
 				000CE95714947101003002C3 /* KCDocumentStoreFileBackend.m in Sources */,
 				000CE95B14947101003002C3 /* KCDocumentStoreOperation.m in Sources */,
+				0062B2711495AA2B00160289 /* NSArray+BoundSafe.m in Sources */,
+				0062B2751495AA2B00160289 /* NSMutableArray+NilSafe.m in Sources */,
+				0062B2791495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +515,7 @@
 				000CE93C14946F24003002C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

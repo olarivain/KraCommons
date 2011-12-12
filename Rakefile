@@ -2,7 +2,6 @@ require 'XCodeDeployer'
 require 'XCodeProduct'
 
 name = "KraCommons"
-silenceBuilds = true
 products = [ XCodeProduct.new(name, "#{name}-iPhone", "Debug", ["iphoneos", "iphonesimulator"]),
 			XCodeProduct.new(name, "#{name}-x86", "Debug", ["macosx"])]
 builder = XCodeDeployer.new(products, true)
