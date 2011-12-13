@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef void(^KCVoidBlock)(void);
+typedef void(^KCIntegerBlock)(NSInteger result);
 
 #ifndef KC_BLOCKS
 #define KC_BLOCKS
