@@ -25,7 +25,7 @@ If the download is successfully cancelled, the callback will NOT be called.
 */
 @interface KCRequestQueueItem : NSObject {
   __weak KCRequestQueue *queue;
-  __strong  RequestCallback callback;
+  __strong  KCRequestCallback callback;
   __strong NSURL *url;
   __strong NSData *requestData;
 
@@ -53,7 +53,7 @@ If the download is successfully cancelled, the callback will NOT be called.
 @property (nonatomic, readonly) NSString *method;
 
 // callback block that will be called when request is done. Can be nil.
-@property (nonatomic, readonly) RequestCallback callback;
+@property (nonatomic, readonly) KCRequestCallback callback;
 
 @property (nonatomic, readonly) BOOL success;
 @property (nonatomic, readonly) NSError *error;
@@ -64,8 +64,8 @@ If the download is successfully cancelled, the callback will NOT be called.
 @property (nonatomic, readwrite, retain) id cancellationKey;
 @property (nonatomic, readwrite, assign) BOOL cancelled;
 
-+ (id) requestQueueItemWithQueue: (KCRequestQueue*) queue URL: (NSURL*) url andCallback:(RequestCallback) requestCallback;
-+ (id) requestQueueItemWithQueue: (KCRequestQueue*) queue URL: (NSURL*) url method: (NSString *) aMethod data: (NSData *) data andCallback:(RequestCallback) requestCallback;
++ (id) requestQueueItemWithQueue: (KCRequestQueue*) queue URL: (NSURL*) url andCallback:(KCRequestCallback) requestCallback;
++ (id) requestQueueItemWithQueue: (KCRequestQueue*) queue URL: (NSURL*) url method: (NSString *) aMethod data: (NSData *) data andCallback:(KCRequestCallback) requestCallback;
 - (void) start;
 - (void) cancel;
 

@@ -103,28 +103,29 @@
 
 
 #pragma mark - Request methods
-- (KCRequestQueueItem*) requestWithPath: (NSString *) path andCallback: (RequestCallback) callback
+- (KCRequestQueueItem*) requestWithPath: (NSString *) path andCallback: (KCRequestCallback) callback
 {
   return [self requestWithPath: path params: nil andCallback: callback];
 }
 
 - (KCRequestQueueItem*) requestWithPath: (NSString *) path 
                                  params: (NSDictionary *) params 
-                            andCallback: (RequestCallback) callback 
+                            andCallback: (KCRequestCallback) callback 
 {
   return [self requestWithPath: path params: params method: @"GET" andCallback: callback];
 }
 
+#warning add caching support
 - (KCRequestQueueItem*) requestWithPath: (NSString *) path 
                                  params: (NSDictionary *) params 
                                  method: (NSString *) method 
-                            andCallback: (RequestCallback) callback
+                            andCallback: (KCRequestCallback) callback
 {
   NSString *urlString = [NSString stringWithFormat:@"http://%@:%i%@", host, port, path];
 
   NSData *data = nil;
   // process parameters appropriately, depending on requested method
-  if([@"GET" isEqualToString: method]) 
+  if([@"GET" caseInsensitiveCompare: method] == NSOrderedSame) 
   {
     NSString *paramString = [self paramString: params];
     if(paramString) 

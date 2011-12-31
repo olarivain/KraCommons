@@ -42,11 +42,11 @@
 		0062B2771495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0062B2781495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */; };
 		0062B2791495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */; };
-		00823FC714AEA41400CEDDEB /* KCRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC114AEA41400CEDDEB /* KCRequestDelegate.h */; };
+		00823FC714AEA41400CEDDEB /* KCRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC114AEA41400CEDDEB /* KCRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00823FC814AEA41400CEDDEB /* KCRequestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC214AEA41400CEDDEB /* KCRequestDelegate.m */; };
-		00823FC914AEA41400CEDDEB /* KCRequestQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC314AEA41400CEDDEB /* KCRequestQueue.h */; };
+		00823FC914AEA41400CEDDEB /* KCRequestQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC314AEA41400CEDDEB /* KCRequestQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00823FCA14AEA41400CEDDEB /* KCRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC414AEA41400CEDDEB /* KCRequestQueue.m */; };
-		00823FCB14AEA41400CEDDEB /* KCRequestQueueItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC514AEA41400CEDDEB /* KCRequestQueueItem.h */; };
+		00823FCB14AEA41400CEDDEB /* KCRequestQueueItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC514AEA41400CEDDEB /* KCRequestQueueItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00823FCC14AEA41400CEDDEB /* KCRequestQueueItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC614AEA41400CEDDEB /* KCRequestQueueItem.m */; };
 /* End PBXBuildFile section */
 
@@ -285,10 +285,10 @@
 				000CE95F1494728F003002C3 /* UIImage+Retina.h in Headers */,
 				0062B26E1495AA2B00160289 /* NSArray+BoundSafe.h in Headers */,
 				0062B2721495AA2B00160289 /* NSMutableArray+NilSafe.h in Headers */,
-				0062B2761495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */,
 				00823FC714AEA41400CEDDEB /* KCRequestDelegate.h in Headers */,
 				00823FC914AEA41400CEDDEB /* KCRequestQueue.h in Headers */,
 				00823FCB14AEA41400CEDDEB /* KCRequestQueueItem.h in Headers */,
+				0062B2761495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +427,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DDEBUG_NETWORK=1";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -444,6 +445,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

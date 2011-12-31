@@ -15,8 +15,8 @@ static KCRequestQueue *sharedInstance;
 @interface KCRequestQueue()
 + (KCRequestQueue*) shardInstance;
 
-- (KCRequestQueueItem*) addURL: (NSURL*) url callback: (RequestCallback) callback;
-- (KCRequestQueueItem*) addURL: (NSURL*) url withData: (NSData*) data withMethod: (NSString *) method andCallback: (RequestCallback) callback;
+- (KCRequestQueueItem*) addURL: (NSURL*) url callback: (KCRequestCallback) callback;
+- (KCRequestQueueItem*) addURL: (NSURL*) url withData: (NSData*) data withMethod: (NSString *) method andCallback: (KCRequestCallback) callback;
 
 - (void) cancelDownloadItem: (KCRequestQueueItem*) url;
 - (void) cancelFromPending: (KCRequestQueueItem*) item;
@@ -65,7 +65,7 @@ static KCRequestQueue *sharedInstance;
 
 #pragma mark - Static methods wrapping singleton calls
 // default, no data, simple get
-+ (KCRequestQueueItem*) scheduleURL:(NSURL *)url withCallback:(RequestCallback)callback 
++ (KCRequestQueueItem*) scheduleURL:(NSURL *)url withCallback:(KCRequestCallback)callback 
 {
   return [KCRequestQueue scheduleURL: url withData: nil withMethod:@"GET" andCallback: callback];
 }
@@ -74,7 +74,7 @@ static KCRequestQueue *sharedInstance;
 + (KCRequestQueueItem*) scheduleURL: (NSURL*) url 
                            withData: (NSData *) data 
                          withMethod: (NSString *) method 
-                        andCallback: (RequestCallback) callback 
+                        andCallback: (KCRequestCallback) callback 
 {
   return  [[KCRequestQueue shardInstance] addURL: url withData: data withMethod: method andCallback: callback];
 }
@@ -85,7 +85,7 @@ static KCRequestQueue *sharedInstance;
 }
 
 #pragma mark - Add URL method
-- (KCRequestQueueItem*) addURL: (NSURL*) url callback: (RequestCallback) callback 
+- (KCRequestQueueItem*) addURL: (NSURL*) url callback: (KCRequestCallback) callback 
 {
   return [self addURL: url withData: nil withMethod: @"GET" andCallback: callback];
 }
@@ -93,7 +93,7 @@ static KCRequestQueue *sharedInstance;
 - (KCRequestQueueItem*) addURL: (NSURL*) url 
                       withData: (NSData*) data 
                     withMethod: (NSString *) method 
-                   andCallback: (RequestCallback) callback 
+                   andCallback: (KCRequestCallback) callback 
 {
   KCRequestQueueItem *item = nil;
   @synchronized(self)
@@ -223,7 +223,7 @@ static KCRequestQueue *sharedInstance;
   [self processNextQueueItem];
   
   // callback if we're supposed to
-  RequestCallback callback = item.callback;
+  KCRequestCallback callback = item.callback;
   if(callback) 
   {
     callback(item);

@@ -11,27 +11,45 @@
 
 @interface KCRequestQueueItem()
 
-- (id) initWithQueue: (KCRequestQueue*) downloadQueue URL: (NSURL*) downloadURL method: (NSString *) aMethod data: (NSData *) data andCallback:(RequestCallback) requestCallback;
+- (id) initWithQueue: (KCRequestQueue*) downloadQueue URL: (NSURL*) downloadURL method: (NSString *) aMethod data: (NSData *) data andCallback:(KCRequestCallback) requestCallback;
 - (NSHTTPURLResponse*) httpResponse;
 @end
 
 @implementation KCRequestQueueItem
 
-+ (id) requestQueueItemWithQueue: (KCRequestQueue*) queue URL: (NSURL*) url andCallback:(RequestCallback) requestCallback 
++ (id) requestQueueItemWithQueue: (KCRequestQueue*) queue 
+                             URL: (NSURL*) url 
+                     andCallback:(KCRequestCallback) requestCallback 
 {
-  return [KCRequestQueueItem requestQueueItemWithQueue: queue URL: url method: @"GET" data: nil andCallback: requestCallback];
+  return [KCRequestQueueItem requestQueueItemWithQueue: queue 
+                                                   URL: url 
+                                                method: @"GET" 
+                                                  data: nil 
+                                           andCallback: requestCallback];
 }
 
-+ (id) requestQueueItemWithQueue: (KCRequestQueue*) queue URL: (NSURL*) url method: (NSString *) aMethod data: (NSData *) data andCallback:(RequestCallback) requestCallback 
++ (id) requestQueueItemWithQueue: (KCRequestQueue*) queue 
+                             URL: (NSURL*) url 
+                          method: (NSString *) aMethod 
+                            data: (NSData *) data 
+                     andCallback:(KCRequestCallback) requestCallback 
 {
-  return [[KCRequestQueueItem alloc] initWithQueue: queue URL: url method: aMethod data: data andCallback: requestCallback];
+  return [[KCRequestQueueItem alloc] initWithQueue: queue 
+                                               URL: url 
+                                            method: aMethod 
+                                              data: data 
+                                       andCallback: requestCallback];
 }
 
-- (id) initWithQueue: (KCRequestQueue*) downloadQueue URL: (NSURL*) downloadURL method: (NSString *) aMethod data: (NSData *) data andCallback:(RequestCallback) requestCallback 
+- (id) initWithQueue: (KCRequestQueue*) downloadQueue 
+                 URL: (NSURL*) downloadURL 
+              method: (NSString *) aMethod 
+                data: (NSData *) data 
+         andCallback:(KCRequestCallback) requestCallback 
 {
   self = [super init];
   if(self) 
-{
+  {
     url = downloadURL;
     requestData = data;
     method = aMethod;
@@ -61,7 +79,9 @@
   [request setHTTPMethod: method];
   
   connection = [NSURLConnection connectionWithRequest: request delegate: self];
-  
+#if DEBUG_NETWORK == 1
+  NSLog(@"Starting request %@", url.absoluteString);
+#endif
   [connection start];
   NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
   // run the current run loop every 0.2 seconds, self is responsible for flipping the shouldKeeprunning switch
@@ -73,6 +93,9 @@
 
 - (void) cancel 
 {
+#if DEBUG_NETWORK == 1
+  NSLog(@"Canceling %@", url.absoluteString);
+#endif
   shouldKeepRunning = NO;
   cancelled = YES;
   [connection cancel];
@@ -89,7 +112,7 @@
 {
   NSObject *object = [self jsonObject];
   if([object isKindOfClass: [NSDictionary class]])
-{
+  {
       return (NSDictionary *) object;
   }
   
@@ -100,7 +123,7 @@
 {
   NSObject *object = [self jsonObject];
   if([object isKindOfClass: [NSArray class]])
-{
+  {
       return (NSArray *) object;
   }
   
@@ -174,7 +197,7 @@
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection 
 {
   success = YES;
-#ifdef DEBUG
+#if DEBUG_NETWORK == 1
   [self logFailure];
 #endif
   shouldKeepRunning = NO;
@@ -184,7 +207,7 @@
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)failure 
 {
   success = NO;
-#ifdef DEBUG
+#if DEBUG_NETWORK == 1
   [self logFailure];
 #endif
   error = failure;

@@ -11,7 +11,7 @@
 @class KCRequestQueueItem;
 
 // callback typedef
-typedef void(^RequestCallback)(KCRequestQueueItem*);
+typedef void(^KCRequestCallback)(KCRequestQueueItem*);
 
 /*
  RequestQueue is a scheduler for HTTP requests.
@@ -48,9 +48,9 @@ typedef void(^RequestCallback)(KCRequestQueueItem*);
 }
 
 // schedules given URL for request, associating it with given request
-+ (KCRequestQueueItem*) scheduleURL: (NSURL*) url withCallback: (RequestCallback) callback;
++ (KCRequestQueueItem*) scheduleURL: (NSURL*) url withCallback: (KCRequestCallback) callback;
 
-+ (KCRequestQueueItem*) scheduleURL: (NSURL*) url withData: (NSData *) data withMethod: (NSString *) method andCallback: (RequestCallback) callback;
++ (KCRequestQueueItem*) scheduleURL: (NSURL*) url withData: (NSData *) data withMethod: (NSString *) method andCallback: (KCRequestCallback) callback;
 
 // cancels given request queue item. requests can only be cancelled in pending or active phase, not in callback phase.
 + (void) cancelItem: (KCRequestQueueItem*) url;

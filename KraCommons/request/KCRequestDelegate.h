@@ -24,10 +24,10 @@
 + (id) requestDelegateWithHost: (NSString *) host andPort: (NSInteger) port;
 
 // simple GET, no params
-- (KCRequestQueueItem*) requestWithPath: (NSString *) path andCallback: (RequestCallback) callback;
+- (KCRequestQueueItem*) requestWithPath: (NSString *) path andCallback: (KCRequestCallback) callback;
 
 // simple GET, params are considered HTTP URL params
-- (KCRequestQueueItem*) requestWithPath: (NSString *) path params: (NSDictionary *) params andCallback: (RequestCallback) callback;
+- (KCRequestQueueItem*) requestWithPath: (NSString *) path params: (NSDictionary *) params andCallback: (KCRequestCallback) callback;
 // exposes method, params are considered HTTP URL params if method is GET, will be serialized to JSON as body otherwise
-- (KCRequestQueueItem*) requestWithPath: (NSString *) path params: (NSDictionary *) params method: (NSString *) method andCallback: (RequestCallback) callback;
+- (KCRequestQueueItem*) requestWithPath: (NSString *) path params: (NSDictionary *) params method: (NSString *) method andCallback: (KCRequestCallback) callback;
 @end
