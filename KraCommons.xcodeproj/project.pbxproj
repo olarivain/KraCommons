@@ -42,6 +42,12 @@
 		0062B2771495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0062B2781495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */; };
 		0062B2791495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */; };
+		00823FC714AEA41400CEDDEB /* KCRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC114AEA41400CEDDEB /* KCRequestDelegate.h */; };
+		00823FC814AEA41400CEDDEB /* KCRequestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC214AEA41400CEDDEB /* KCRequestDelegate.m */; };
+		00823FC914AEA41400CEDDEB /* KCRequestQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC314AEA41400CEDDEB /* KCRequestQueue.h */; };
+		00823FCA14AEA41400CEDDEB /* KCRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC414AEA41400CEDDEB /* KCRequestQueue.m */; };
+		00823FCB14AEA41400CEDDEB /* KCRequestQueueItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC514AEA41400CEDDEB /* KCRequestQueueItem.h */; };
+		00823FCC14AEA41400CEDDEB /* KCRequestQueueItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC614AEA41400CEDDEB /* KCRequestQueueItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +80,12 @@
 		0062B26A1495AA2B00160289 /* NSMutableArray+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+NilSafe.m"; sourceTree = "<group>"; };
 		0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
 		0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
+		00823FC114AEA41400CEDDEB /* KCRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCRequestDelegate.h; sourceTree = "<group>"; };
+		00823FC214AEA41400CEDDEB /* KCRequestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCRequestDelegate.m; sourceTree = "<group>"; };
+		00823FC314AEA41400CEDDEB /* KCRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCRequestQueue.h; sourceTree = "<group>"; };
+		00823FC414AEA41400CEDDEB /* KCRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCRequestQueue.m; sourceTree = "<group>"; };
+		00823FC514AEA41400CEDDEB /* KCRequestQueueItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCRequestQueueItem.h; sourceTree = "<group>"; };
+		00823FC614AEA41400CEDDEB /* KCRequestQueueItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCRequestQueueItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +147,7 @@
 				000CE94914947101003002C3 /* DocumentStore */,
 				000CE95C1494728F003002C3 /* Image */,
 				000CE944149470AE003002C3 /* keyboard */,
+				00823FC014AEA41400CEDDEB /* request */,
 				000CE91A14946E9B003002C3 /* Supporting Files */,
 			);
 			path = KraCommons;
@@ -243,6 +256,19 @@
 			path = Dictionaries;
 			sourceTree = "<group>";
 		};
+		00823FC014AEA41400CEDDEB /* request */ = {
+			isa = PBXGroup;
+			children = (
+				00823FC114AEA41400CEDDEB /* KCRequestDelegate.h */,
+				00823FC214AEA41400CEDDEB /* KCRequestDelegate.m */,
+				00823FC314AEA41400CEDDEB /* KCRequestQueue.h */,
+				00823FC414AEA41400CEDDEB /* KCRequestQueue.m */,
+				00823FC514AEA41400CEDDEB /* KCRequestQueueItem.h */,
+				00823FC614AEA41400CEDDEB /* KCRequestQueueItem.m */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -260,6 +286,9 @@
 				0062B26E1495AA2B00160289 /* NSArray+BoundSafe.h in Headers */,
 				0062B2721495AA2B00160289 /* NSMutableArray+NilSafe.h in Headers */,
 				0062B2761495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */,
+				00823FC714AEA41400CEDDEB /* KCRequestDelegate.h in Headers */,
+				00823FC914AEA41400CEDDEB /* KCRequestQueue.h in Headers */,
+				00823FCB14AEA41400CEDDEB /* KCRequestQueueItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +384,9 @@
 				0062B2701495AA2B00160289 /* NSArray+BoundSafe.m in Sources */,
 				0062B2741495AA2B00160289 /* NSMutableArray+NilSafe.m in Sources */,
 				0062B2781495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */,
+				00823FC814AEA41400CEDDEB /* KCRequestDelegate.m in Sources */,
+				00823FCA14AEA41400CEDDEB /* KCRequestQueue.m in Sources */,
+				00823FCC14AEA41400CEDDEB /* KCRequestQueueItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
