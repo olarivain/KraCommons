@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NSIndexPath+NSIndexPath_Key.h"
+#import "NSIndexPath+Key.h"
 
 @implementation NSIndexPath (NSIndexPath_Key)
 

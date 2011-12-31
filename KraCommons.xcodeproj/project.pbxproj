@@ -50,8 +50,8 @@
 		00823FCC14AEA41400CEDDEB /* KCRequestQueueItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC614AEA41400CEDDEB /* KCRequestQueueItem.m */; };
 		0082401914AF993700CEDDEB /* KCNibUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0082401714AF993700CEDDEB /* KCNibUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0082401A14AF993700CEDDEB /* KCNibUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082401814AF993700CEDDEB /* KCNibUtils.m */; };
-		0082402E14AFA78000CEDDEB /* NSIndexPath+NSIndexPath_Key.h in Headers */ = {isa = PBXBuildFile; fileRef = 0082402C14AFA78000CEDDEB /* NSIndexPath+NSIndexPath_Key.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0082403014AFA78000CEDDEB /* NSIndexPath+NSIndexPath_Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082402D14AFA78000CEDDEB /* NSIndexPath+NSIndexPath_Key.m */; };
+		0082402E14AFA78000CEDDEB /* NSIndexPath+Key.h in Headers */ = {isa = PBXBuildFile; fileRef = 0082402C14AFA78000CEDDEB /* NSIndexPath+Key.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0082403014AFA78000CEDDEB /* NSIndexPath+Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082402D14AFA78000CEDDEB /* NSIndexPath+Key.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,8 +92,8 @@
 		00823FC614AEA41400CEDDEB /* KCRequestQueueItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCRequestQueueItem.m; sourceTree = "<group>"; };
 		0082401714AF993700CEDDEB /* KCNibUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCNibUtils.h; sourceTree = "<group>"; };
 		0082401814AF993700CEDDEB /* KCNibUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCNibUtils.m; sourceTree = "<group>"; };
-		0082402C14AFA78000CEDDEB /* NSIndexPath+NSIndexPath_Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSIndexPath+NSIndexPath_Key.h"; path = "KraCommons/indexpath/NSIndexPath+NSIndexPath_Key.h"; sourceTree = SOURCE_ROOT; };
-		0082402D14AFA78000CEDDEB /* NSIndexPath+NSIndexPath_Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSIndexPath+NSIndexPath_Key.m"; path = "KraCommons/indexpath/NSIndexPath+NSIndexPath_Key.m"; sourceTree = SOURCE_ROOT; };
+		0082402C14AFA78000CEDDEB /* NSIndexPath+Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSIndexPath+Key.h"; path = "KraCommons/indexpath/NSIndexPath+Key.h"; sourceTree = SOURCE_ROOT; };
+		0082402D14AFA78000CEDDEB /* NSIndexPath+Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSIndexPath+Key.m"; path = "KraCommons/indexpath/NSIndexPath+Key.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,8 +295,8 @@
 		0082402B14AFA76100CEDDEB /* IndexPath */ = {
 			isa = PBXGroup;
 			children = (
-				0082402C14AFA78000CEDDEB /* NSIndexPath+NSIndexPath_Key.h */,
-				0082402D14AFA78000CEDDEB /* NSIndexPath+NSIndexPath_Key.m */,
+				0082402C14AFA78000CEDDEB /* NSIndexPath+Key.h */,
+				0082402D14AFA78000CEDDEB /* NSIndexPath+Key.m */,
 			);
 			name = IndexPath;
 			path = keyboard;
@@ -323,7 +323,7 @@
 				00823FCB14AEA41400CEDDEB /* KCRequestQueueItem.h in Headers */,
 				0082401914AF993700CEDDEB /* KCNibUtils.h in Headers */,
 				0062B2761495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */,
-				0082402E14AFA78000CEDDEB /* NSIndexPath+NSIndexPath_Key.h in Headers */,
+				0082402E14AFA78000CEDDEB /* NSIndexPath+Key.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +423,7 @@
 				00823FCA14AEA41400CEDDEB /* KCRequestQueue.m in Sources */,
 				00823FCC14AEA41400CEDDEB /* KCRequestQueueItem.m in Sources */,
 				0082401A14AF993700CEDDEB /* KCNibUtils.m in Sources */,
-				0082403014AFA78000CEDDEB /* NSIndexPath+NSIndexPath_Key.m in Sources */,
+				0082403014AFA78000CEDDEB /* NSIndexPath+Key.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
