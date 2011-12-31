@@ -2,8 +2,8 @@ require 'XCodeDeployer'
 require 'XCodeProduct'
 
 name = "KraCommons"
-products = [ XCodeProduct.new(name, "#{name}-iPhone", "Debug", ["iphoneos", "iphonesimulator"]),
-			XCodeProduct.new(name, "#{name}-x86", "Debug", ["macosx"])]
+products = [ XCodeProduct.new(name, "#{name}-iPhone", "Release", ["iphoneos", "iphonesimulator"]),
+			XCodeProduct.new(name, "#{name}-x86", "Release", ["macosx"])]
 builder = XCodeDeployer.new(products, true)
 
 task :setup do

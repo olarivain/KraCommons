@@ -48,6 +48,8 @@
 		00823FCA14AEA41400CEDDEB /* KCRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC414AEA41400CEDDEB /* KCRequestQueue.m */; };
 		00823FCB14AEA41400CEDDEB /* KCRequestQueueItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC514AEA41400CEDDEB /* KCRequestQueueItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00823FCC14AEA41400CEDDEB /* KCRequestQueueItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC614AEA41400CEDDEB /* KCRequestQueueItem.m */; };
+		0082401914AF993700CEDDEB /* KCNibUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0082401714AF993700CEDDEB /* KCNibUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0082401A14AF993700CEDDEB /* KCNibUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082401814AF993700CEDDEB /* KCNibUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		00823FC414AEA41400CEDDEB /* KCRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCRequestQueue.m; sourceTree = "<group>"; };
 		00823FC514AEA41400CEDDEB /* KCRequestQueueItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCRequestQueueItem.h; sourceTree = "<group>"; };
 		00823FC614AEA41400CEDDEB /* KCRequestQueueItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCRequestQueueItem.m; sourceTree = "<group>"; };
+		0082401714AF993700CEDDEB /* KCNibUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCNibUtils.h; sourceTree = "<group>"; };
+		0082401814AF993700CEDDEB /* KCNibUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCNibUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 				000CE94914947101003002C3 /* DocumentStore */,
 				000CE95C1494728F003002C3 /* Image */,
 				000CE944149470AE003002C3 /* keyboard */,
+				0082401614AF993700CEDDEB /* nib */,
 				00823FC014AEA41400CEDDEB /* request */,
 				000CE91A14946E9B003002C3 /* Supporting Files */,
 			);
@@ -269,6 +274,15 @@
 			path = request;
 			sourceTree = "<group>";
 		};
+		0082401614AF993700CEDDEB /* nib */ = {
+			isa = PBXGroup;
+			children = (
+				0082401714AF993700CEDDEB /* KCNibUtils.h */,
+				0082401814AF993700CEDDEB /* KCNibUtils.m */,
+			);
+			path = nib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -288,6 +302,7 @@
 				00823FC714AEA41400CEDDEB /* KCRequestDelegate.h in Headers */,
 				00823FC914AEA41400CEDDEB /* KCRequestQueue.h in Headers */,
 				00823FCB14AEA41400CEDDEB /* KCRequestQueueItem.h in Headers */,
+				0082401914AF993700CEDDEB /* KCNibUtils.h in Headers */,
 				0062B2761495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +402,7 @@
 				00823FC814AEA41400CEDDEB /* KCRequestDelegate.m in Sources */,
 				00823FCA14AEA41400CEDDEB /* KCRequestQueue.m in Sources */,
 				00823FCC14AEA41400CEDDEB /* KCRequestQueueItem.m in Sources */,
+				0082401A14AF993700CEDDEB /* KCNibUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
