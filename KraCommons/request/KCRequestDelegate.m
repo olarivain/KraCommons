@@ -121,7 +121,8 @@
                                  method: (NSString *) method 
                             andCallback: (KCRequestCallback) callback
 {
-  NSString *urlString = [NSString stringWithFormat:@"http://%@:%i%@", host, port, path];
+  NSString *escapedPath = [path stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+  NSString *urlString = [NSString stringWithFormat:@"http://%@:%i%@", host, port, escapedPath];
 
   NSData *data = nil;
   // process parameters appropriately, depending on requested method

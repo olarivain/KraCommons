@@ -78,6 +78,7 @@
 		000CE94F14947101003002C3 /* KCDocumentStoreOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCDocumentStoreOperation.m; sourceTree = "<group>"; };
 		000CE95D1494728F003002C3 /* UIImage+Retina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Retina.h"; sourceTree = "<group>"; };
 		000CE95E1494728F003002C3 /* UIImage+Retina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Retina.m"; sourceTree = "<group>"; };
+		0028481814AFD099003F5818 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		0062B2671495AA2B00160289 /* NSArray+BoundSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BoundSafe.h"; sourceTree = "<group>"; };
 		0062B2681495AA2B00160289 /* NSArray+BoundSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BoundSafe.m"; sourceTree = "<group>"; };
 		0062B2691495AA2B00160289 /* NSMutableArray+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+NilSafe.h"; sourceTree = "<group>"; };
@@ -123,6 +124,7 @@
 				000CE93414946F24003002C3 /* KraCommons-x86 */,
 				000CE91614946E9B003002C3 /* Frameworks */,
 				000CE91514946E9B003002C3 /* Products */,
+				0028481814AFD099003F5818 /* Rakefile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -344,6 +346,23 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
+/* Begin PBXLegacyTarget section */
+		0028483414AFD6A8003F5818 /* KraCommons */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "build deploy configuration=${CONFIGURATION}";
+			buildConfigurationList = 0028483714AFD6A8003F5818 /* Build configuration list for PBXLegacyTarget "KraCommons" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/rake;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = KraCommons;
+			passBuildSettingsInEnvironment = 1;
+			productName = KraCommons;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		000CE91314946E9B003002C3 /* KraCommons-iPhone */ = {
 			isa = PBXNativeTarget;
@@ -402,6 +421,7 @@
 			targets = (
 				000CE91314946E9B003002C3 /* KraCommons-iPhone */,
 				000CE92C14946F24003002C3 /* KraCommons-x86 */,
+				0028483414AFD6A8003F5818 /* KraCommons */,
 			);
 		};
 /* End PBXProject section */
@@ -560,6 +580,39 @@
 			};
 			name = Release;
 		};
+		0028483514AFD6A8003F5818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUGGING_SYMBOLS = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0028483614AFD6A8003F5818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -589,6 +642,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		0028483714AFD6A8003F5818 /* Build configuration list for PBXLegacyTarget "KraCommons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0028483514AFD6A8003F5818 /* Debug */,
+				0028483614AFD6A8003F5818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

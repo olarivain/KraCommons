@@ -2,8 +2,10 @@ require 'XCodeDeployer'
 require 'XCodeProduct'
 
 name = "KraCommons"
-products = [ XCodeProduct.new(name, "#{name}-iPhone", "Release", ["iphoneos", "iphonesimulator"]),
-			XCodeProduct.new(name, "#{name}-x86", "Release", ["macosx"])]
+commandLineArg = ENV['configuration']
+releaseMode = commandLineArg == nil ? "Release" : commandLineArg
+products = [ XCodeProduct.new(name, "#{name}-iPhone", releaseMode, ["iphoneos", "iphonesimulator"]),
+			XCodeProduct.new(name, "#{name}-x86", releaseMode, ["macosx"])]
 builder = XCodeDeployer.new(products, true)
 
 task :setup do
@@ -19,7 +21,7 @@ task :clean do
 end
 
 task :build do
-	puts "building " + name
+	puts "building " + name + " with configuration " + releaseMode
 	builder.build
 end
 
@@ -28,7 +30,7 @@ task :deploy do
 	builder.deploy
 end
 
-task :release => [:setup, :clean, :build, :deploy] do
+task :release => [:setup, :clean, :build, :deploy] do 
 	builder.release
 end
 
