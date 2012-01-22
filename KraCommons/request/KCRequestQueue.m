@@ -1,6 +1,5 @@
 //
-//  DownloadQueue.m
-//  ECUtil
+//  KCRequestQueue.m
 //
 //  Created by Kra on 6/28/11.
 //  Copyright 2011 Kra. All rights reserved.
@@ -15,8 +14,13 @@ static KCRequestQueue *sharedInstance;
 @interface KCRequestQueue()
 + (KCRequestQueue*) shardInstance;
 
-- (KCRequestQueueItem*) addURL: (NSURL*) url callback: (KCRequestCallback) callback;
-- (KCRequestQueueItem*) addURL: (NSURL*) url withData: (NSData*) data withMethod: (NSString *) method andCallback: (KCRequestCallback) callback;
+- (KCRequestQueueItem*) addURL: (NSURL*) url 
+                      callback: (KCRequestCallback) callback;
+
+- (KCRequestQueueItem*) addURL: (NSURL*) url 
+                      withData: (NSData*) data 
+                    withMethod: (NSString *) method 
+                   andCallback: (KCRequestCallback) callback;
 
 - (void) cancelDownloadItem: (KCRequestQueueItem*) url;
 - (void) cancelFromPending: (KCRequestQueueItem*) item;
@@ -67,7 +71,10 @@ static KCRequestQueue *sharedInstance;
 // default, no data, simple get
 + (KCRequestQueueItem*) scheduleURL:(NSURL *)url withCallback:(KCRequestCallback)callback 
 {
-  return [KCRequestQueue scheduleURL: url withData: nil withMethod:@"GET" andCallback: callback];
+  return [KCRequestQueue scheduleURL: url 
+                            withData: nil 
+                          withMethod:@"GET" 
+                         andCallback: callback];
 }
 
 // Full blown control over method, body etc
@@ -76,7 +83,10 @@ static KCRequestQueue *sharedInstance;
                          withMethod: (NSString *) method 
                         andCallback: (KCRequestCallback) callback 
 {
-  return  [[KCRequestQueue shardInstance] addURL: url withData: data withMethod: method andCallback: callback];
+  return  [[KCRequestQueue shardInstance] addURL: url 
+                                        withData: data 
+                                      withMethod: method 
+                                     andCallback: callback];
 }
 
 + (void) cancelItem: (KCRequestQueueItem*) item 

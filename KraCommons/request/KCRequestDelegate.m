@@ -11,7 +11,8 @@
 #import "KCRequestQueueItem.h"
 
 @interface KCRequestDelegate()
-- (id) initWithHost: (NSString *) host andPort: (NSInteger) port;
+- (id) initWithHost: (NSString *) host 
+            andPort: (NSInteger) port;
 @end
 
 @implementation KCRequestDelegate
@@ -20,9 +21,11 @@
   return [[KCRequestDelegate alloc] initWithHost: host andPort: 80];  
 }
 
-+ (id) requestDelegateWithHost: (NSString *) host andPort: (NSInteger) port
++ (id) requestDelegateWithHost: (NSString *) host 
+                       andPort: (NSInteger) port
 {
-  return [[KCRequestDelegate alloc] initWithHost: host andPort: port];
+  return [[KCRequestDelegate alloc] initWithHost: host 
+                                         andPort: port];
 }
 
 - (id) initWithHost: (NSString *) aHost andPort: (NSInteger) aPort
@@ -105,14 +108,19 @@
 #pragma mark - Request methods
 - (KCRequestQueueItem*) requestWithPath: (NSString *) path andCallback: (KCRequestCallback) callback
 {
-  return [self requestWithPath: path params: nil andCallback: callback];
+  return [self requestWithPath: path 
+                        params: nil 
+                   andCallback: callback];
 }
 
 - (KCRequestQueueItem*) requestWithPath: (NSString *) path 
                                  params: (NSDictionary *) params 
                             andCallback: (KCRequestCallback) callback 
 {
-  return [self requestWithPath: path params: params method: @"GET" andCallback: callback];
+  return [self requestWithPath: path 
+                        params: params 
+                        method: @"GET" 
+                   andCallback: callback];
 }
 
 #warning add caching support
@@ -136,7 +144,9 @@
   }
   else 
   {
-    data = [NSJSONSerialization dataWithJSONObject: params options:NSJSONReadingAllowFragments error: nil];
+    data = [NSJSONSerialization dataWithJSONObject: params 
+                                           options:NSJSONReadingAllowFragments 
+                                             error: nil];
   }
 
   // and schedule the guy

@@ -1,6 +1,5 @@
 //
 //  RequestQueueItem.h
-//  ECUtil
 //
 //  Created by Kra on 6/28/11.
 //  Copyright 2011 Kra. All rights reserved.
@@ -64,8 +63,15 @@ If the download is successfully cancelled, the callback will NOT be called.
 @property (nonatomic, readwrite, retain) id cancellationKey;
 @property (nonatomic, readwrite, assign) BOOL cancelled;
 
-+ (id) requestQueueItemWithQueue: (KCRequestQueue*) queue URL: (NSURL*) url andCallback:(KCRequestCallback) requestCallback;
-+ (id) requestQueueItemWithQueue: (KCRequestQueue*) queue URL: (NSURL*) url method: (NSString *) aMethod data: (NSData *) data andCallback:(KCRequestCallback) requestCallback;
++ (id) requestQueueItemWithQueue: (KCRequestQueue*) queue 
+                             URL: (NSURL*) url 
+                     andCallback: (KCRequestCallback) requestCallback;
+
++ (id) requestQueueItemWithQueue: (KCRequestQueue*) queue 
+                             URL: (NSURL*) url 
+                          method: (NSString *) aMethod 
+                            data: (NSData *) data 
+                     andCallback: (KCRequestCallback) requestCallback;
 - (void) start;
 - (void) cancel;
 
@@ -79,7 +85,6 @@ If the download is successfully cancelled, the callback will NOT be called.
 
 // HTTP headers
 - (NSDictionary *) headers;
-
 
 - (BOOL) isSuccessful;
 - (void) logFailure;

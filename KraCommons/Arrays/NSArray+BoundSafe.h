@@ -1,9 +1,8 @@
 //
 //  NSArray+BoundSafe.h
-//  ECUtil
+//  KCUtil
 //
 //  Created by Larivain, Olivier on 7/15/11.
-//  Copyright 2011 Edmunds. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,4 +12,8 @@
 
 - (id) boundSafeObjectAtIndex: (NSInteger) index;
 
+@end
+
+@interface NSMutableArray (NSMutableArray_NilSafe)
+- (void) addObjectNilSafe: (id) object;
 @end

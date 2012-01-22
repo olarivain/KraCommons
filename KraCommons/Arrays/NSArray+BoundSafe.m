@@ -1,9 +1,7 @@
 //
 //  NSArray+BoundSafe.m
-//  ECUtil
 //
 //  Created by Larivain, Olivier on 7/15/11.
-//  Copyright 2011 Edmunds. All rights reserved.
 //
 
 #import "NSArray+BoundSafe.h"
@@ -17,6 +15,18 @@
     }
     
     return [self objectAtIndex: index];
+}
+
+@end
+
+@implementation NSMutableArray (NSMutableArray_NilSafe)
+
+- (void) addObjectNilSafe: (id) object {
+    if(object == nil) {
+        return;
+    }
+    
+    [self addObject: object];
 }
 
 @end

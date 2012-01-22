@@ -1,9 +1,7 @@
 //
 //  UIImage+Retina.h
-//  ECUtil
 //
 //  Created by Larivain, Olivier on 8/4/11.
-//  Copyright 2011 Edmunds. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -17,7 +15,5 @@
 + (UIImage *)retinaImageWithData:(NSData *)data andSize:(CGSize)size;
 
 + (UIImage *)scaleImage:(UIImage *)original toSize:(CGSize)newSize;
-
-//+ (UIImage *)normalize:(UIImage *)image;
 
 @end

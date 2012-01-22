@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		000CE91814946E9B003002C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000CE91714946E9B003002C3 /* Foundation.framework */; };
 		000CE92F14946F24003002C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000CE92E14946F24003002C3 /* Cocoa.framework */; };
-		000CE93914946F24003002C3 /* KraCommons_x86.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE93814946F24003002C3 /* KraCommons_x86.m */; };
 		000CE93E14946F7D003002C3 /* KCBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE93D14946F7D003002C3 /* KCBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		000CE93F14946F7D003002C3 /* KCBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE93D14946F7D003002C3 /* KCBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		000CE94214946FB7003002C3 /* KCAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE94114946FB7003002C3 /* KCAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,10 +33,6 @@
 		0062B26F1495AA2B00160289 /* NSArray+BoundSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B2671495AA2B00160289 /* NSArray+BoundSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0062B2701495AA2B00160289 /* NSArray+BoundSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B2681495AA2B00160289 /* NSArray+BoundSafe.m */; };
 		0062B2711495AA2B00160289 /* NSArray+BoundSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B2681495AA2B00160289 /* NSArray+BoundSafe.m */; };
-		0062B2721495AA2B00160289 /* NSMutableArray+NilSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B2691495AA2B00160289 /* NSMutableArray+NilSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0062B2731495AA2B00160289 /* NSMutableArray+NilSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B2691495AA2B00160289 /* NSMutableArray+NilSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0062B2741495AA2B00160289 /* NSMutableArray+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26A1495AA2B00160289 /* NSMutableArray+NilSafe.m */; };
-		0062B2751495AA2B00160289 /* NSMutableArray+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26A1495AA2B00160289 /* NSMutableArray+NilSafe.m */; };
 		0062B2761495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0062B2771495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0062B2781495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */; };
@@ -64,8 +59,6 @@
 		000CE93214946F24003002C3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		000CE93314946F24003002C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		000CE93614946F24003002C3 /* KraCommons-x86-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KraCommons-x86-Prefix.pch"; sourceTree = "<group>"; };
-		000CE93714946F24003002C3 /* KraCommons_x86.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KraCommons_x86.h; sourceTree = "<group>"; };
-		000CE93814946F24003002C3 /* KraCommons_x86.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KraCommons_x86.m; sourceTree = "<group>"; };
 		000CE93D14946F7D003002C3 /* KCBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCBlocks.h; path = blocks/KCBlocks.h; sourceTree = "<group>"; };
 		000CE94114946FB7003002C3 /* KCAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnimation.h; sourceTree = "<group>"; };
 		000CE945149470AE003002C3 /* KCKeyboardToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKeyboardToolbarController.h; sourceTree = "<group>"; };
@@ -81,8 +74,6 @@
 		0028481814AFD099003F5818 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		0062B2671495AA2B00160289 /* NSArray+BoundSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BoundSafe.h"; sourceTree = "<group>"; };
 		0062B2681495AA2B00160289 /* NSArray+BoundSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BoundSafe.m"; sourceTree = "<group>"; };
-		0062B2691495AA2B00160289 /* NSMutableArray+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+NilSafe.h"; sourceTree = "<group>"; };
-		0062B26A1495AA2B00160289 /* NSMutableArray+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+NilSafe.m"; sourceTree = "<group>"; };
 		0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
 		0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
 		00823FC114AEA41400CEDDEB /* KCRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCRequestDelegate.h; sourceTree = "<group>"; };
@@ -194,8 +185,6 @@
 		000CE93414946F24003002C3 /* KraCommons-x86 */ = {
 			isa = PBXGroup;
 			children = (
-				000CE93714946F24003002C3 /* KraCommons_x86.h */,
-				000CE93814946F24003002C3 /* KraCommons_x86.m */,
 				000CE93514946F24003002C3 /* Supporting Files */,
 			);
 			path = "KraCommons-x86";
@@ -255,8 +244,6 @@
 			children = (
 				0062B2671495AA2B00160289 /* NSArray+BoundSafe.h */,
 				0062B2681495AA2B00160289 /* NSArray+BoundSafe.m */,
-				0062B2691495AA2B00160289 /* NSMutableArray+NilSafe.h */,
-				0062B26A1495AA2B00160289 /* NSMutableArray+NilSafe.m */,
 			);
 			path = Arrays;
 			sourceTree = "<group>";
@@ -319,7 +306,6 @@
 				000CE95814947101003002C3 /* KCDocumentStoreOperation.h in Headers */,
 				000CE95F1494728F003002C3 /* UIImage+Retina.h in Headers */,
 				0062B26E1495AA2B00160289 /* NSArray+BoundSafe.h in Headers */,
-				0062B2721495AA2B00160289 /* NSMutableArray+NilSafe.h in Headers */,
 				00823FC714AEA41400CEDDEB /* KCRequestDelegate.h in Headers */,
 				00823FC914AEA41400CEDDEB /* KCRequestQueue.h in Headers */,
 				00823FCB14AEA41400CEDDEB /* KCRequestQueueItem.h in Headers */,
@@ -339,7 +325,6 @@
 				000CE95514947101003002C3 /* KCDocumentStoreFileBackend.h in Headers */,
 				000CE95914947101003002C3 /* KCDocumentStoreOperation.h in Headers */,
 				0062B26F1495AA2B00160289 /* NSArray+BoundSafe.h in Headers */,
-				0062B2731495AA2B00160289 /* NSMutableArray+NilSafe.h in Headers */,
 				0062B2771495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +422,6 @@
 				000CE95A14947101003002C3 /* KCDocumentStoreOperation.m in Sources */,
 				000CE9601494728F003002C3 /* UIImage+Retina.m in Sources */,
 				0062B2701495AA2B00160289 /* NSArray+BoundSafe.m in Sources */,
-				0062B2741495AA2B00160289 /* NSMutableArray+NilSafe.m in Sources */,
 				0062B2781495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */,
 				00823FC814AEA41400CEDDEB /* KCRequestDelegate.m in Sources */,
 				00823FCA14AEA41400CEDDEB /* KCRequestQueue.m in Sources */,
@@ -451,12 +435,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000CE93914946F24003002C3 /* KraCommons_x86.m in Sources */,
 				000CE95314947101003002C3 /* KCDocumentStore.m in Sources */,
 				000CE95714947101003002C3 /* KCDocumentStoreFileBackend.m in Sources */,
 				000CE95B14947101003002C3 /* KCDocumentStoreOperation.m in Sources */,
 				0062B2711495AA2B00160289 /* NSArray+BoundSafe.m in Sources */,
-				0062B2751495AA2B00160289 /* NSMutableArray+NilSafe.m in Sources */,
 				0062B2791495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +632,7 @@
 				0028483614AFD6A8003F5818 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,9 +1,7 @@
 //
-//  ECBlocks.h
-//  ECUtil
+//  KCBlocks.h
 //
 //  Created by Larivain, Olivier on 7/14/11.
-//  Copyright 2011 Edmunds. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -1,9 +1,8 @@
 //
 //  NSDictionary+NilSafe.m
-//  ECUtil
+//  KCUtil
 //
 //  Created by Larivain, Olivier on 7/28/11.
-//  Copyright 2011 Edmunds. All rights reserved.
 //
 
 #import "NSDictionary+NilSafe.h"

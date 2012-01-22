@@ -1,20 +1,18 @@
 //
-//  ECDocumentStoreOperation.h
-//  ECUtil
+//  KCDocumentStoreOperation.h
 //
 //  Created by Larivain, Olivier on 7/10/11.
-//  Copyright 2011 Edmunds. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-typedef enum ECDocumentStoreOperationType{
+typedef enum KCDocumentStoreOperationType{
     WRITE = 0,
     DELETE = 1,
     READ = 2
 } KCDocumentStoreOperationType;
 
-typedef enum ECDocumentStoreOperationReadType{
+typedef enum KCDocumentStoreOperationReadType{
     DATA = 0,
     JSON = 1,
     IMAGE = 2
@@ -35,15 +33,20 @@ typedef void(^KCDocumentStoreCallback)(id);
     KCDocumentStoreOperationReadType readType;
 }
 
-+ (KCDocumentStoreOperation*) documentStoreOperationWithId: (NSString *) documentId andData: (NSData*) data;
-+ (KCDocumentStoreOperation*) documentStoreOperationWithId: (NSString *) documentId;
-+ (KCDocumentStoreOperation*) documentStoreOperationWithId: (NSString *) documentId readType: (KCDocumentStoreOperationReadType) readType andCallback:(KCDocumentStoreCallback) callback;
++ (KCDocumentStoreOperation*) documentStoreOperationWithId: (NSString *) documentId 
+                                                   andData: (NSData*) data;
 
-@property (nonatomic, readonly, strong) NSString *documentId;
-@property (nonatomic, readonly, strong) NSData *data;
-@property (nonatomic, readonly, assign) KCDocumentStoreOperationType type;
-@property (nonatomic, readonly, assign) KCDocumentStoreOperationReadType readType;
-@property (nonatomic, readonly, copy) KCDocumentStoreCallback callback;
++ (KCDocumentStoreOperation*) documentStoreOperationWithId: (NSString *) documentId;
+
++ (KCDocumentStoreOperation*) documentStoreOperationWithId: (NSString *) documentId 
+                                                  readType: (KCDocumentStoreOperationReadType) readType 
+                                               andCallback:(KCDocumentStoreCallback) callback;
+
+@property (nonatomic, readonly) NSString *documentId;
+@property (nonatomic, readonly) NSData *data;
+@property (nonatomic, readonly) KCDocumentStoreOperationType type;
+@property (nonatomic, readonly) KCDocumentStoreOperationReadType readType;
+@property (nonatomic, readonly) KCDocumentStoreCallback callback;
 
 - (BOOL) equals: (KCDocumentStoreOperation*) other;
 @end

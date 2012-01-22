@@ -1,13 +1,12 @@
 //
 //  KCDocumentStore.m
-//  ECUtil
 //
 //  Created by Larivain, Olivier on 7/9/11.
-//  Copyright 2011 Edmunds. All rights reserved.
 //
 #import "KCDocumentStore.h"
 #import "KCDocumentStoreFileBackend.h"
 #import "KCDocumentStoreOperation.h"
+#import "NSArray+BoundSafe.h"
 
 #ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
 #import "UIImage+Retina.h"
@@ -94,7 +93,7 @@ typedef void(^KCDocumentStoreBlock)();
 #pragma mark Scheduling
 - (void) scheduleOperation:(KCDocumentStoreOperation *)operation {
     @synchronized(self) {
-        // dequeue any pending operation for this id.
+        // remove any pending operation for this id.
         // indeed, since we are going to update it, this operation will have the final word
         // and we can skip altogether the pending one.
         for(int i = 0; i < [pending count]; i++){
@@ -158,12 +157,13 @@ typedef void(^KCDocumentStoreBlock)();
         return;
     } 
     
-    // read operation, get from backend and then perform callback
-    NSData * data = [backend documentWithId: operation.documentId];
     // no callback, get out now
     if(operation.callback == nil) {
         return;
     }
+    
+    // read operation, get from backend and then perform callback
+    NSData * data = [backend documentWithId: operation.documentId];
     
     // honor read type by building relevant object and then callback
     switch (operation.readType) {
@@ -190,13 +190,14 @@ typedef void(^KCDocumentStoreBlock)();
  Any refactoring should ensure that this logic MUST be called from a synchronized block
  */
 - (KCDocumentStoreOperation*) dequeueNextOperationWithConcurrency {
+    // pop next pending
+    KCDocumentStoreOperation *operation = [pending boundSafeObjectAtIndex: 0];
+    
     // nothing to do, get out!
-    if([pending count] == 0) {
+    if(operation == nil){
         return nil;
     }
-    
-    // just move from pending to processing
-    KCDocumentStoreOperation *operation = [pending objectAtIndex: 0];
+    // otherwise move it to processing
     [processing addObject: operation];
     [pending removeObject: operation];
     
@@ -251,7 +252,8 @@ typedef void(^KCDocumentStoreBlock)();
 #pragma raw Data
 - (void) persistData: (NSData*) data withId: (NSString *) documentId {
     // schedule a write
-    KCDocumentStoreOperation *operation = [KCDocumentStoreOperation documentStoreOperationWithId: documentId andData: data];
+    KCDocumentStoreOperation *operation = [KCDocumentStoreOperation documentStoreOperationWithId: documentId 
+                                                                                         andData: data];
     [self scheduleOperation: operation];
 }
 
@@ -274,12 +276,16 @@ typedef void(^KCDocumentStoreBlock)();
 }
 
 - (void) persistDictionary: (NSDictionary*) dict withId: (NSString *) documentId {
-    NSData *data = [NSJSONSerialization dataWithJSONObject: dict options:0 error: nil];
+    NSData *data = [NSJSONSerialization dataWithJSONObject: dict 
+                                                   options: 0 
+                                                     error: nil];
     [self persistData: data withId:documentId];
 }
 
 - (void) persistArray: (NSArray*) array withId: (NSString *) documentId {
-    NSData *data = [NSJSONSerialization dataWithJSONObject: array options:0 error: nil];
+    NSData *data = [NSJSONSerialization dataWithJSONObject: array 
+                                                   options: 0 
+                                                     error: nil];
     [self persistData: data withId:documentId];    
 }
 
@@ -319,7 +325,8 @@ typedef void(^KCDocumentStoreBlock)();
         return nil;
     }
     
-    if([self isDocumentExpired: documentId withExpiration: expiration]){
+    if([self isDocumentExpired: documentId 
+                withExpiration: expiration]){
         return nil;
     }
     

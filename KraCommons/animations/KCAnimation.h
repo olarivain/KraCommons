@@ -1,9 +1,7 @@
 //
-//  ECAnimation.h
-//  EdmundsUI
+//  KCAnimation.h
 //
 //  Created by Larivain, Olivier on 7/9/11.
-//  Copyright 2011 Edmunds.com. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

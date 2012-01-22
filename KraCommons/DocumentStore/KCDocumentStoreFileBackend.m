@@ -1,9 +1,7 @@
 //
-//  ECDocumentStoreFileBackend.m
-//  ECUtil
+//  KCDocumentStoreFileBackend.m
 //
 //  Created by Larivain, Olivier on 7/10/11.
-//  Copyright 2011 Edmunds. All rights reserved.
 //
 
 #import "KCDocumentStoreFileBackend.h"
@@ -27,8 +25,11 @@
         // path to storage folder
         NSArray *documentPath = NSSearchPathForDirectoriesInDomains(searchPath, NSUserDomainMask, YES);
         if([documentPath count] == 0) {
-            @throw [NSException exceptionWithName:@"IllegalArgumentException" reason:@"No path found for file storage" userInfo: nil];
+            @throw [NSException exceptionWithName:@"IllegalArgumentException" 
+                                           reason:@"No path found for file storage" 
+                                         userInfo: nil];
         }
+        
         NSString *baseStorePath = @"/document-store/";
         self.storePath = [NSString stringWithFormat: @"%@%@%@", [documentPath objectAtIndex: 0], baseStorePath, path];
         
@@ -52,23 +53,32 @@
     if([fileManager fileExistsAtPath: storePath isDirectory:&isFolder]) {
         if(!isFolder) {
             NSString *reason = [NSString stringWithFormat:@"Document Store path %@ already exists and is a file.", storePath];
-            @throw [NSException exceptionWithName:@"IllegalArgumentException" reason:reason userInfo: nil];
+            @throw [NSException exceptionWithName:@"IllegalArgumentException" 
+                                           reason:reason 
+                                         userInfo: nil];
         }
         return;
     } else {    
         // otherwise, juste create it.
         NSError *error = nil;
-        [fileManager createDirectoryAtPath: storePath withIntermediateDirectories: YES attributes: nil error:&error];
+        [fileManager createDirectoryAtPath: storePath 
+               withIntermediateDirectories: YES 
+                                attributes: nil 
+                                     error:&error];
         if(error) {
             NSString *reason = [NSString stringWithFormat:@"Document Store path %@ could not be created, with NSError %@.", storePath, error];
-            @throw [NSException exceptionWithName:@"IllegalArgumentException" reason:reason userInfo: nil];   
+            @throw [NSException exceptionWithName:@"IllegalArgumentException" 
+                                           reason:reason 
+                                         userInfo: nil];   
         }
     }
     
     // and make sure it's writable.
     if(![fileManager isWritableFileAtPath: storePath]) {
         NSString *reason = [NSString stringWithFormat:@"Document Store path %@ is not writable.", storePath];
-        @throw [NSException exceptionWithName:@"IllegalArgumentException" reason:reason userInfo: nil];
+        @throw [NSException exceptionWithName:@"IllegalArgumentException" 
+                                       reason:reason 
+                                     userInfo: nil];
     }
 }
 
@@ -82,7 +92,9 @@
 - (void) persistDocument: (NSData*) data withId: (NSString *) documentId {
     // sanity check
     if(documentId == nil) {
-        @throw [NSException exceptionWithName:@"IllegalArgumentException" reason:@"ID is required to persist data" userInfo: nil];        
+        @throw [NSException exceptionWithName:@"IllegalArgumentException" 
+                                       reason:@"ID is required to persist data" 
+                                     userInfo: nil];        
     }
     
     // create folder if needed
@@ -102,7 +114,9 @@
 - (void) deleteDocumentWithId: (NSString *) documentId {
     // sanity check
     if(documentId == nil) {
-         @throw [NSException exceptionWithName:@"IllegalArgumentException" reason:@"ID is required to delete data" userInfo: nil];        
+         @throw [NSException exceptionWithName:@"IllegalArgumentException" 
+                                        reason:@"ID is required to delete data" 
+                                      userInfo: nil];        
     }
     
     // grab file path
@@ -136,7 +150,9 @@
 - (NSData *) documentWithId: (NSString *) documentId{
     // sanity check
     if(documentId == nil) {
-        @throw [NSException exceptionWithName:@"IllegalArgumentException" reason:@"ID is required to read data" userInfo: nil];        
+        @throw [NSException exceptionWithName:@"IllegalArgumentException" 
+                                       reason:@"ID is required to read data" 
+                                     userInfo: nil];        
     }
     
     // grab file path
@@ -165,6 +181,7 @@
     }
     
     // create an array holding all path components (i.e. NOT containing the file name)
+#warning what about NSString removeLastPathComponent?
     NSMutableArray *components = [NSMutableArray arrayWithObject: storePath];
     [components addObjectsFromArray: pathElements];
     [components removeLastObject];

@@ -1,6 +1,5 @@
 //
-//  ECDownloadService.h
-//  ECUtil
+//  KCDownloadDelegate.h
 //
 //  Created by Kra on 6/29/11.
 //  Copyright 2011 Kra. All rights reserved.
@@ -20,14 +19,22 @@
   NSInteger port;
 }
 
+// defaults port to 80
 + (id) requestDelegateWithHost: (NSString *) host;
 + (id) requestDelegateWithHost: (NSString *) host andPort: (NSInteger) port;
 
 // simple GET, no params
-- (KCRequestQueueItem*) requestWithPath: (NSString *) path andCallback: (KCRequestCallback) callback;
+- (KCRequestQueueItem*) requestWithPath: (NSString *) path 
+                            andCallback: (KCRequestCallback) callback;
 
 // simple GET, params are considered HTTP URL params
-- (KCRequestQueueItem*) requestWithPath: (NSString *) path params: (NSDictionary *) params andCallback: (KCRequestCallback) callback;
+- (KCRequestQueueItem*) requestWithPath: (NSString *) path 
+                                 params: (NSDictionary *) params 
+                            andCallback: (KCRequestCallback) callback;
+
 // exposes method, params are considered HTTP URL params if method is GET, will be serialized to JSON as body otherwise
-- (KCRequestQueueItem*) requestWithPath: (NSString *) path params: (NSDictionary *) params method: (NSString *) method andCallback: (KCRequestCallback) callback;
+- (KCRequestQueueItem*) requestWithPath: (NSString *) path 
+                                 params: (NSDictionary *) params 
+                                 method: (NSString *) method 
+                            andCallback: (KCRequestCallback) callback;
 @end

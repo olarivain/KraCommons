@@ -11,7 +11,12 @@
 
 @interface KCRequestQueueItem()
 
-- (id) initWithQueue: (KCRequestQueue*) downloadQueue URL: (NSURL*) downloadURL method: (NSString *) aMethod data: (NSData *) data andCallback:(KCRequestCallback) requestCallback;
+- (id) initWithQueue: (KCRequestQueue*) downloadQueue 
+                 URL: (NSURL*) downloadURL 
+              method: (NSString *) aMethod 
+                data: (NSData *) data 
+         andCallback:(KCRequestCallback) requestCallback;
+
 - (NSHTTPURLResponse*) httpResponse;
 @end
 
@@ -74,7 +79,7 @@
 #pragma mark - Start/Stop methods
 - (void) start 
 {
-  NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url];;
+  NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url];
   [request setHTTPBody: requestData];
   [request setHTTPMethod: method];
   
@@ -87,7 +92,9 @@
   // run the current run loop every 0.2 seconds, self is responsible for flipping the shouldKeeprunning switch
   // when download ends OR is cancelled.
   shouldKeepRunning = YES;
-  while(shouldKeepRunning && [runLoop runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.2]]);
+  while(shouldKeepRunning && 
+        [runLoop runMode: NSDefaultRunLoopMode 
+              beforeDate: [NSDate dateWithTimeIntervalSinceNow:0.2]]);
 
 }
 
@@ -104,7 +111,9 @@
 #pragma mark - JSON converter
 - (NSObject*) jsonObject 
 {
-  NSObject *object = [NSJSONSerialization JSONObjectWithData: responseData options: NSJSONReadingAllowFragments error: nil];
+  NSObject *object = [NSJSONSerialization JSONObjectWithData: responseData 
+                                                     options: NSJSONReadingAllowFragments 
+                                                       error: nil];
   return object;
 }
 

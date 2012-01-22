@@ -1,18 +1,19 @@
 //
 //  UIImage+Retina.m
-//  ECUtil
 //
 //  Created by Larivain, Olivier on 8/4/11.
-//  Copyright 2011 Edmunds. All rights reserved.
 //
 
 #import "UIImage+Retina.h"
 
+static BOOL highPerformance;
 
 @implementation UIImage (UIImage_Retina)
 
-+ (UIImage *)retinaImageWithData:(NSData *)data {
-    if(data == nil) {
++ (UIImage *)retinaImageWithData:(NSData *)data 
+{
+    if(data == nil) 
+    {
         return nil;
     }
     
@@ -21,17 +22,22 @@
     
     // if image already has the right scale factor, just return it
     CGFloat scale = [UIScreen mainScreen].scale;
-    if (image.scale == scale) {    
+    if (image.scale == scale) 
+    {    
         return image;
     } 
     
     // otherwise, resize it
-    return [UIImage imageWithCGImage:[image CGImage] scale: scale orientation:UIImageOrientationUp];        
+    return [UIImage imageWithCGImage: image.CGImage 
+                               scale: scale 
+                         orientation:UIImageOrientationUp];        
 }
 
 
-+ (UIImage *)retinaImageWithData:(NSData *)data andSize:(CGSize)size {
-    if(data == nil) {
++ (UIImage *)retinaImageWithData:(NSData *)data andSize:(CGSize)size 
+{
+    if(data == nil) 
+    {
         return nil;
     }
     
@@ -39,7 +45,8 @@
     return [self scaleImage:retinaImage toSize:size];
 }
 
-+ (UIImage *)scaleImage:(UIImage *)original toSize:(CGSize)newSize {
++ (UIImage *)scaleImage:(UIImage *)original toSize:(CGSize)newSize 
+{
     
     CGImageRef imageRef = original.CGImage;
     CGFloat desiredRatio = newSize.width / newSize.height; 
@@ -47,12 +54,17 @@
     CGFloat scale = [UIScreen mainScreen].scale;
     CGSize scaledSize = CGSizeMake(newSize.width * scale, newSize.height * scale);
     CGSize drawSize = CGSizeZero;
-    if (fabs(aspectRatio - desiredRatio) < 0.1) {
+    if (fabs(aspectRatio - desiredRatio) < 0.1) 
+    {
         drawSize = scaledSize;
-    } else if(aspectRatio > desiredRatio) { // wider
+    } 
+    else if(aspectRatio > desiredRatio) // wider
+    { 
         drawSize = CGSizeMake(scaledSize.width, scaledSize.width / aspectRatio);
-    } else { // taller
-        drawSize = CGSizeMake(scaledSize.height / (1.0/aspectRatio), scaledSize.height);
+    } 
+    else // taller
+    { 
+        drawSize = CGSizeMake(scaledSize.height * aspectRatio, scaledSize.height);
     } 
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
@@ -67,19 +79,39 @@
                                                 kCGImageAlphaPremultipliedLast);
     
     // Set the quality level to use when rescaling
-    BOOL highPerformance = [[UIDevice currentDevice] respondsToSelector:@selector(isMultitaskingSupported)];
-    CGContextSetInterpolationQuality(bitmap, highPerformance ? kCGInterpolationHigh : kCGInterpolationLow);
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        UIDevice *device = [UIDevice currentDevice];
+        highPerformance = [device respondsToSelector:@selector(isMultitaskingSupported)];
+    });
+    
+    CGInterpolationQuality quality = highPerformance ? kCGInterpolationHigh : kCGInterpolationLow;
+    CGContextSetInterpolationQuality(bitmap, quality);
     
     // Draw into the context; this scales the image
-    CGContextSetFillColorWithColor(bitmap, [[UIColor clearColor] CGColor]);
-    CGContextFillRect(bitmap, CGRectMake(0, 0, scaledSize.width, scaledSize.height));
-    CGContextDrawImage(bitmap, CGRectMake((scaledSize.width - drawSize.width) / 2, (scaledSize.height - drawSize.height) / 2, drawSize.width, drawSize.height), imageRef);
+    CGContextSetFillColorWithColor(bitmap, [UIColor clearColor].CGColor);
+    CGRect fillRect;
+    fillRect.origin = CGPointZero;
+    fillRect.size = CGSizeMake(scaledSize.width, scaledSize.height);
+    // fill it with transparent color
+    CGContextFillRect(bitmap, fillRect);
     
-    // Get the resized image from the context and a UIImage
+    // center the image in the draw rect
+    CGRect imageRect;
+    CGFloat xOrigin = (scaledSize.width - drawSize.width) / 2.0f;
+    CGFloat yOrigin = (scaledSize.height - drawSize.height) / 2.0f;
+    imageRect.origin = CGPointMake(xOrigin, yOrigin);
+    imageRect.size = CGSizeMake(drawSize.width, drawSize.height);
+    // and paint in there
+    CGContextDrawImage(bitmap, imageRect, imageRef);
+    
+    // Get the resized image from the context and create a UIImage from it
     CGImageRef newImageRef = CGBitmapContextCreateImage(bitmap);
-    UIImage *newImage = [UIImage imageWithCGImage:newImageRef scale:[UIScreen mainScreen].scale orientation:original.imageOrientation];
+    UIImage *newImage = [UIImage imageWithCGImage: newImageRef 
+                                            scale: scale 
+                                      orientation: original.imageOrientation];
     
-    // Clean up
+    // Clean up memory
     CGContextRelease(bitmap);
     CGColorSpaceRelease(colorSpace);
     CGImageRelease(newImageRef);
