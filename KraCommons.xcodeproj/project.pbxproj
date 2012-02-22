@@ -334,7 +334,7 @@
 /* Begin PBXLegacyTarget section */
 		0028483414AFD6A8003F5818 /* KraCommons */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "build deploy configuration=${CONFIGURATION}";
+			buildArgumentsString = "build install configuration=${CONFIGURATION}";
 			buildConfigurationList = 0028483714AFD6A8003F5818 /* Build configuration list for PBXLegacyTarget "KraCommons" */;
 			buildPhases = (
 			);
@@ -461,7 +461,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -479,7 +479,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -527,7 +527,7 @@
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KraCommons-x86/KraCommons-x86-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -550,7 +550,7 @@
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KraCommons-x86/KraCommons-x86-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
