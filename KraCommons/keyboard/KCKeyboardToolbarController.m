@@ -56,6 +56,7 @@
 {
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center removeObserver: self];
+    [super dealloc];
 }
 
 @synthesize disabled;

@@ -15,7 +15,7 @@
  High level wrapper on the RequestQueue, provides convenience with host/port so it doesn't have to be constantly built in. Also, provides HTTP escaping, parameter handling etc.
  */
 @interface KCRequestDelegate : NSObject {
-  __strong NSString *host;
+  NSString *host;
   NSInteger port;
 }
 

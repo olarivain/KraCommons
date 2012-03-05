@@ -23,21 +23,21 @@
 + (KCDocumentStoreOperation*) documentStoreOperationWithId: (NSString *) documentId 
                                                    andData: (NSData*) data 
 {
-    return [[KCDocumentStoreOperation alloc] initWithId: documentId andData: data];
+    return [[[KCDocumentStoreOperation alloc] initWithId: documentId andData: data] autorelease];
 }
 
 + (KCDocumentStoreOperation*) documentStoreOperationWithId: (NSString *) documentId
 {
-    return [[KCDocumentStoreOperation alloc] initWithId: documentId];
+    return [[[KCDocumentStoreOperation alloc] initWithId: documentId] autorelease];
 }
 
 + (KCDocumentStoreOperation*) documentStoreOperationWithId: (NSString *) documentId 
                                                   readType: (KCDocumentStoreOperationReadType) readType 
                                                andCallback: (KCDocumentStoreCallback) callback 
 {
-    return [[KCDocumentStoreOperation alloc] initWithId: documentId 
+    return [[[KCDocumentStoreOperation alloc] initWithId: documentId 
                                                callback: callback 
-                                                andType: readType];
+                                                andType: readType] autorelease];
 }
 
 // write init

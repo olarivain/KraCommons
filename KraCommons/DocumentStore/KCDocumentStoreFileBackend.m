@@ -7,8 +7,8 @@
 #import "KCDocumentStoreFileBackend.h"
 
 @interface KCDocumentStoreFileBackend()
-@property (nonatomic, readwrite, strong) NSString *storePath;
-@property (nonatomic, readwrite, strong) NSFileManager *fileManager;
+@property (nonatomic, readwrite, retain) NSString *storePath;
+@property (nonatomic, readwrite, retain) NSFileManager *fileManager;
 
 - (void) createPathForId: (NSString *) dataId;
 - (NSString *) filePathForId: (NSString *) dataId;
@@ -19,7 +19,7 @@
 - (id) initWithBasePath:(NSString *)path temporary: (BOOL) temp{
     self = [super init];
     if(self) {
-        fileManager = [[NSFileManager alloc] init];
+        self.fileManager = [[[NSFileManager alloc] init] autorelease];
         
         NSSearchPathDirectory searchPath = temp ? NSCachesDirectory : NSDocumentDirectory;
         // path to storage folder
@@ -42,6 +42,11 @@
     return self;
 }
 
+- (void) dealloc {
+    self.storePath = nil;
+    self.fileManager = nil;
+    [super dealloc];
+}
 
 @synthesize storePath;
 @synthesize fileManager;

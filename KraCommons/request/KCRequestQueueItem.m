@@ -10,6 +10,15 @@
 #import "KCRequestQueue.h"
 
 @interface KCRequestQueueItem()
+@property (nonatomic, readwrite, assign) KCRequestQueue *queue;
+@property (nonatomic, readwrite, copy) KCRequestCallback callback;
+@property (nonatomic, readwrite, retain) NSURL *url;
+@property (nonatomic, readwrite, retain) NSData *requestData;
+@property (nonatomic, readwrite, retain) NSString *method;
+@property (nonatomic, readwrite, retain) NSURLConnection *connection;
+@property (nonatomic, readwrite, retain) NSURLResponse *response;
+@property (nonatomic, readwrite, retain) NSData *responseData;
+@property (nonatomic, readwrite, retain) NSError *error;
 
 - (id) initWithQueue: (KCRequestQueue*) downloadQueue 
                  URL: (NSURL*) downloadURL 
@@ -21,7 +30,6 @@
 @end
 
 @implementation KCRequestQueueItem
-
 + (id) requestQueueItemWithQueue: (KCRequestQueue*) queue 
                              URL: (NSURL*) url 
                      andCallback:(KCRequestCallback) requestCallback 
@@ -39,11 +47,11 @@
                             data: (NSData *) data 
                      andCallback:(KCRequestCallback) requestCallback 
 {
-  return [[KCRequestQueueItem alloc] initWithQueue: queue 
+  return [[[KCRequestQueueItem alloc] initWithQueue: queue 
                                                URL: url 
                                             method: aMethod 
                                               data: data 
-                                       andCallback: requestCallback];
+                                       andCallback: requestCallback] autorelease];
 }
 
 - (id) initWithQueue: (KCRequestQueue*) downloadQueue 
@@ -55,26 +63,40 @@
   self = [super init];
   if(self) 
   {
-    url = downloadURL;
-    requestData = data;
-    method = aMethod;
-    queue = downloadQueue;
-    callback = [requestCallback copy];
-    responseData = [NSMutableData data];
+    self.url = downloadURL;
+    self.requestData = data;
+    self.method = aMethod;
+    self.queue = downloadQueue;
+    self.callback = requestCallback;
+    self.responseData = [NSMutableData data];
   }
   
   return self;
+}
+
+- (void) dealloc {
+    self.url = nil;
+    self.callback = nil;
+    self.responseData = nil;
+    self.error = nil;
+    self.requestData = nil;
+    self.method = nil;
+    self.cancellationKey = nil;
+    [super dealloc];
 }
 
 @synthesize url;
 @synthesize callback;
 @synthesize responseData;
 @synthesize success;
+@synthesize connection;
+@synthesize response;
 @synthesize error;
 @synthesize cancelled;
 @synthesize requestData;
 @synthesize method;
 @synthesize cancellationKey;
+@synthesize queue;
 
 #pragma mark - Start/Stop methods
 - (void) start 
@@ -83,7 +105,7 @@
   [request setHTTPBody: requestData];
   [request setHTTPMethod: method];
   
-  connection = [NSURLConnection connectionWithRequest: request delegate: self];
+  self.connection = [NSURLConnection connectionWithRequest: request delegate: self];
 #if DEBUG_NETWORK == 1
   NSLog(@"Starting request %@", url.absoluteString);
 #endif
@@ -195,7 +217,7 @@
 #pragma mark - NSURLConnection delegate methods
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)aResponse 
 {
-  response = aResponse;
+  self.response = aResponse;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)newData  
@@ -219,7 +241,7 @@
 #if DEBUG_NETWORK == 1
   [self logFailure];
 #endif
-  error = failure;
+  self.error = failure;
   shouldKeepRunning = NO;
   [queue requestFinished: self];
 }

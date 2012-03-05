@@ -21,10 +21,10 @@ typedef void(^KCDocumentStoreBlock)();
 
 @interface KCDocumentStore()
 
-@property (nonatomic, readwrite, strong) NSOperationQueue *writeQueue;
-@property (nonatomic, readwrite, strong) id<KCDocumentStoreBackend> backend;
-@property (nonatomic, readwrite, strong) NSMutableArray *pending;
-@property (nonatomic, readwrite, strong) NSMutableArray *processing;
+@property (nonatomic, readwrite, retain) NSOperationQueue *writeQueue;
+@property (nonatomic, readwrite, retain) id<KCDocumentStoreBackend> backend;
+@property (nonatomic, readwrite, retain) NSMutableArray *pending;
+@property (nonatomic, readwrite, retain) NSMutableArray *processing;
 
 - (id) init: (BOOL) temp;
 
@@ -69,10 +69,10 @@ typedef void(^KCDocumentStoreBlock)();
     if(self) {        
         // TODO this should be configurable through plist, potentially programatically.
         // So far, we're fine since we have only one backend :)
-        self.backend = [[KCDocumentStoreFileBackend alloc] initWithBasePath:DEFAULT_STORE_PATH temporary: temp];
+        self.backend = [[[KCDocumentStoreFileBackend alloc] initWithBasePath:DEFAULT_STORE_PATH temporary: temp] autorelease];
         
         NSInteger maxConcurrentOperation = 30;
-        writeQueue = [[NSOperationQueue alloc] init];
+        self.writeQueue = [[[NSOperationQueue alloc] init] autorelease];
         [writeQueue setMaxConcurrentOperationCount: maxConcurrentOperation];
         
         self.pending = [NSMutableArray arrayWithCapacity: 60];
@@ -81,6 +81,14 @@ typedef void(^KCDocumentStoreBlock)();
         [backend createStore];
     }
     return self;
+}
+
+- (void) dealloc {
+    self.writeQueue = nil;
+    self.backend = nil;
+    self.pending = nil;
+    self.processing = nil;
+    [super dealloc];
 }
 
 

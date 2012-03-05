@@ -37,14 +37,14 @@ typedef void(^KCRequestCallback)(KCRequestQueueItem*);
  to make sure it has been dealloc'd).
  */
 @interface KCRequestQueue : NSObject {
-    __strong NSMutableArray *pending;
-    __strong NSMutableArray *active;
-    __strong NSMutableArray *processing;
+    NSMutableArray *pending;
+    NSMutableArray *active;
+    NSMutableArray *processing;
     int maxConcurrentRequests;
     int currentConcurrentRequests;
     
-    __strong NSOperationQueue *requestOperationQueue;
-    __strong NSOperationQueue *callbackOperationQueue;
+    NSOperationQueue *requestOperationQueue;
+    NSOperationQueue *callbackOperationQueue;
 }
 
 // schedules given URL for request, associating it with given request

@@ -23,42 +23,42 @@ In case success is NO, the "error" property will hold the NSError sent to the NS
 If the download is successfully cancelled, the callback will NOT be called.
 */
 @interface KCRequestQueueItem : NSObject {
-  __weak KCRequestQueue *queue;
-  __strong  KCRequestCallback callback;
-  __strong NSURL *url;
-  __strong NSData *requestData;
+  KCRequestQueue *queue;
+  KCRequestCallback callback;
+  NSURL *url;
+  NSData *requestData;
 
-  __strong NSString *method;
+  NSString *method;
   
-  __strong NSURLConnection *connection;
-  __strong NSURLResponse *response;
+  NSURLConnection *connection;
+  NSURLResponse *response;
 
-  __strong NSMutableData *responseData;
+  NSMutableData *responseData;
   
   BOOL success;
-  __strong NSError *error;
+  NSError *error;
   
   BOOL shouldKeepRunning;
   BOOL cancelled;
 }
 
 // URL this object will/has requested
-@property (nonatomic, readonly) NSURL *url;
+@property (nonatomic, readonly, retain) NSURL *url;
 
 // request body, if any
-@property (nonatomic, readonly) NSData *requestData;
+@property (nonatomic, readonly, retain) NSData *requestData;
 
 // request method, one of GET PUT POST DELETE
-@property (nonatomic, readonly) NSString *method;
+@property (nonatomic, readonly, retain) NSString *method;
 
 // callback block that will be called when request is done. Can be nil.
-@property (nonatomic, readonly) KCRequestCallback callback;
+@property (nonatomic, readonly, copy) KCRequestCallback callback;
 
-@property (nonatomic, readonly) BOOL success;
-@property (nonatomic, readonly) NSError *error;
+@property (nonatomic, readonly, assign) BOOL success;
+@property (nonatomic, readonly, retain) NSError *error;
 
 // Raw server response.
-@property (nonatomic, readonly) NSData *responseData;
+@property (nonatomic, readonly, retain) NSData *responseData;
 
 @property (nonatomic, readwrite, retain) id cancellationKey;
 @property (nonatomic, readwrite, assign) BOOL cancelled;

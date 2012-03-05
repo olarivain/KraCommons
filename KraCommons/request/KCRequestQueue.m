@@ -12,6 +12,12 @@
 static KCRequestQueue *sharedInstance;
 
 @interface KCRequestQueue()
+@property (nonatomic, readwrite, retain) NSMutableArray *pending;
+@property (nonatomic, readwrite, retain) NSMutableArray *active;
+@property (nonatomic, readwrite, retain) NSMutableArray *processing;
+@property (nonatomic, readwrite, retain) NSOperationQueue *requestOperationQueue;
+@property (nonatomic, readwrite, retain) NSOperationQueue *callbackOperationQueue;
+
 + (KCRequestQueue*) shardInstance;
 
 - (KCRequestQueueItem*) addURL: (NSURL*) url 
@@ -36,36 +42,51 @@ static KCRequestQueue *sharedInstance;
 
 @implementation KCRequestQueue
 
+// lazy singleton constructor
++ (KCRequestQueue*) shardInstance 
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[KCRequestQueue alloc] init];
+    });
+    return sharedInstance;
+}
+
 - (id) init 
 {
   self = [super init];
   if(self)
   {
-    pending = [NSMutableArray arrayWithCapacity:20];
-    active = [NSMutableArray arrayWithCapacity: 20];
-    processing = [NSMutableArray arrayWithCapacity: 20];
+    self.pending = [NSMutableArray arrayWithCapacity:20];
+    self.active = [NSMutableArray arrayWithCapacity: 20];
+    self.processing = [NSMutableArray arrayWithCapacity: 20];
     maxConcurrentRequests = 5;
     currentConcurrentRequests = 0;
     
-    requestOperationQueue = [[NSOperationQueue alloc] init];
+    self.requestOperationQueue = [[[NSOperationQueue alloc] init] autorelease];
     [requestOperationQueue setMaxConcurrentOperationCount: maxConcurrentRequests];
     
-    callbackOperationQueue = [[NSOperationQueue alloc] init];
+    self.callbackOperationQueue = [[[NSOperationQueue alloc] init] autorelease];
     [callbackOperationQueue setMaxConcurrentOperationCount: 2*maxConcurrentRequests];
   }
+    
   return self;
 }
 
-
-// lazy singleton constructor
-+ (KCRequestQueue*) shardInstance 
-{
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    sharedInstance = [[KCRequestQueue alloc] init];
-  });
-  return sharedInstance;
+- (void) dealloc {
+    self.pending = nil;
+    self.active = nil;
+    self.processing = nil;
+    self.requestOperationQueue = nil;
+    self.callbackOperationQueue = nil;
+    [super dealloc];
 }
+
+@synthesize pending;
+@synthesize active;
+@synthesize processing;
+@synthesize requestOperationQueue;
+@synthesize callbackOperationQueue;
 
 #pragma mark - Static methods wrapping singleton calls
 // default, no data, simple get

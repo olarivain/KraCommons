@@ -11,21 +11,23 @@
 #import "KCRequestQueueItem.h"
 
 @interface KCRequestDelegate()
+@property (nonatomic, readwrite, retain) NSString *host;
 - (id) initWithHost: (NSString *) host 
             andPort: (NSInteger) port;
 @end
 
 @implementation KCRequestDelegate
+
 + (id) requestDelegateWithHost: (NSString *) host
 {
-  return [[KCRequestDelegate alloc] initWithHost: host andPort: 80];  
+  return [[[KCRequestDelegate alloc] initWithHost: host andPort: 80] autorelease];  
 }
 
 + (id) requestDelegateWithHost: (NSString *) host 
                        andPort: (NSInteger) port
 {
-  return [[KCRequestDelegate alloc] initWithHost: host 
-                                         andPort: port];
+  return [[[KCRequestDelegate alloc] initWithHost: host 
+                                         andPort: port] autorelease];
 }
 
 - (id) initWithHost: (NSString *) aHost andPort: (NSInteger) aPort
@@ -38,6 +40,13 @@
   }
   return self;
 }
+
+- (void) dealloc {
+    self.host = nil;
+    [super dealloc];
+}
+
+@synthesize host;
 
 #pragma mark - Convenience method
 - (NSString *) paramString: (NSDictionary*) params 
@@ -123,7 +132,6 @@
                    andCallback: callback];
 }
 
-#warning add caching support
 - (KCRequestQueueItem*) requestWithPath: (NSString *) path 
                                  params: (NSDictionary *) params 
                                  method: (NSString *) method 
