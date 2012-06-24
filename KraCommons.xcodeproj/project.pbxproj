@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		00DC020B1597D11600F891C9 /* KraCommons-iPhone-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00DC020E1597D11600F891C9 /* Build configuration list for PBXAggregateTarget "KraCommons-iPhone-Universal" */;
+			buildPhases = (
+				00DC02101597D12300F891C9 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "KraCommons-iPhone-Universal";
+			productName = "KraCommons-Universal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		000CE91814946E9B003002C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000CE91714946E9B003002C3 /* Foundation.framework */; };
 		000CE92F14946F24003002C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000CE92E14946F24003002C3 /* Cocoa.framework */; };
@@ -405,11 +419,28 @@
 			projectRoot = "";
 			targets = (
 				000CE91314946E9B003002C3 /* KraCommons-iPhone */,
+				00DC020B1597D11600F891C9 /* KraCommons-iPhone-Universal */,
 				000CE92C14946F24003002C3 /* KraCommons-x86 */,
 				0028483414AFD6A8003F5818 /* KraCommons */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DC02101597D12300F891C9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcodebuild -target KraCommons-iPhone -sdk iphoneos -configuration ${CONFIGURATION} BUILD_DIR=${BUILD_DIR}\nxcodebuild -target KraCommons-iPhone -sdk iphonesimulator -configuration ${CONFIGURATION} BUILD_DIR=${BUILD_DIR} -arch i386\n\nrm -rf ${BUILD_DIR}/Universal\nmkdir ${BUILD_DIR}/Universal\ncp -R ${BUILD_DIR}/${CONFIGURATION}-iphoneos/KraCommons/ ${BUILD_DIR}/Universal/KraCommons/\nlipo -create ${BUILD_DIR}/${CONFIGURATION}-iphoneos/libKraCommons-iPhone.a ${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/libKraCommons-iPhone.a -output ${BUILD_DIR}/Universal/libKraCommons-iPhone.a";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		000CE91014946E9B003002C3 /* Sources */ = {
@@ -597,6 +628,20 @@
 			};
 			name = Release;
 		};
+		00DC020C1597D11600F891C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00DC020D1597D11600F891C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -635,6 +680,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		00DC020E1597D11600F891C9 /* Build configuration list for PBXAggregateTarget "KraCommons-iPhone-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00DC020C1597D11600F891C9 /* Debug */,
+				00DC020D1597D11600F891C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

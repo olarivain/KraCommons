@@ -1,0 +1,30 @@
+<project>
+	<name>eHarmony Foundation iOS library</name>
+	<groupId>org.kra</groupId>
+	<version>2.0.5</version>
+	<scm>git</scm>
+	
+	<artifacts>
+		<artifact>
+			<artifactId>kra-commons-ios</artifactId>
+			<name>KraCommons-iOS</name>
+			<silenceXcode>true</silenceXcode>
+			<target>
+				<name>KraCommons-iPhone-Universal</name>
+				<configuration>Release</configuration>
+				<buildFolder>Universal</buildFolder>
+			</target>
+		</artifact>
+    <artifact>
+			<artifactId>kra-commons-macos</artifactId>
+			<name>KraCommons-MacOS</name>
+			<silenceXcode>true</silenceXcode>
+			<target>
+				<name>KraCommons-x86</name>
+				<configuration>Release</configuration>
+				<buildFolder>Release</buildFolder>
+			</target>
+		</artifact>
+	</artifacts>
+     
+</project>
