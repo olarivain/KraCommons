@@ -345,23 +345,6 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
-/* Begin PBXLegacyTarget section */
-		0028483414AFD6A8003F5818 /* KraCommons */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "build install configuration=${CONFIGURATION}";
-			buildConfigurationList = 0028483714AFD6A8003F5818 /* Build configuration list for PBXLegacyTarget "KraCommons" */;
-			buildPhases = (
-			);
-			buildToolPath = /usr/bin/rake;
-			buildWorkingDirectory = "";
-			dependencies = (
-			);
-			name = KraCommons;
-			passBuildSettingsInEnvironment = 1;
-			productName = KraCommons;
-		};
-/* End PBXLegacyTarget section */
-
 /* Begin PBXNativeTarget section */
 		000CE91314946E9B003002C3 /* KraCommons-iPhone */ = {
 			isa = PBXNativeTarget;
@@ -421,7 +404,6 @@
 				000CE91314946E9B003002C3 /* KraCommons-iPhone */,
 				00DC020B1597D11600F891C9 /* KraCommons-iPhone-Universal */,
 				000CE92C14946F24003002C3 /* KraCommons-x86 */,
-				0028483414AFD6A8003F5818 /* KraCommons */,
 			);
 		};
 /* End PBXProject section */
@@ -595,39 +577,6 @@
 			};
 			name = Release;
 		};
-		0028483514AFD6A8003F5818 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				DEBUGGING_SYMBOLS = YES;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		0028483614AFD6A8003F5818 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 		00DC020C1597D11600F891C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -672,15 +621,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0028483714AFD6A8003F5818 /* Build configuration list for PBXLegacyTarget "KraCommons" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0028483514AFD6A8003F5818 /* Debug */,
-				0028483614AFD6A8003F5818 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		00DC020E1597D11600F891C9 /* Build configuration list for PBXAggregateTarget "KraCommons-iPhone-Universal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -688,6 +628,7 @@
 				00DC020D1597D11600F891C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
