@@ -1,7 +1,7 @@
 <project>
-	<name>eHarmony Foundation iOS library</name>
-	<groupId>org.kra</groupId>
-	<version>2.0.5</version>
+	<name>Kra Foundation iOS library</name>
+	<groupId>org.kra.commons</groupId>
+	<version>1.0.12</version>
 	<scm>git</scm>
 	
 	<artifacts>
