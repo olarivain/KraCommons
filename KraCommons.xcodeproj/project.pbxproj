@@ -345,6 +345,23 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
+/* Begin PBXLegacyTarget section */
+		00DC02461597EE9700F891C9 /* KraCommons Install */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "build[${CONFIGURATION}] install";
+			buildConfigurationList = 00DC02471597EE9700F891C9 /* Build configuration list for PBXLegacyTarget "KraCommons Install" */;
+			buildPhases = (
+			);
+			buildToolPath = rake;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "KraCommons Install";
+			passBuildSettingsInEnvironment = 1;
+			productName = "KraCommons Install";
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		000CE91314946E9B003002C3 /* KraCommons-iPhone */ = {
 			isa = PBXNativeTarget;
@@ -404,6 +421,7 @@
 				000CE91314946E9B003002C3 /* KraCommons-iPhone */,
 				00DC020B1597D11600F891C9 /* KraCommons-iPhone-Universal */,
 				000CE92C14946F24003002C3 /* KraCommons-x86 */,
+				00DC02461597EE9700F891C9 /* KraCommons Install */,
 			);
 		};
 /* End PBXProject section */
@@ -591,6 +609,43 @@
 			};
 			name = Release;
 		};
+		00DC02481597EE9700F891C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUGGING_SYMBOLS = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		00DC02491597EE9700F891C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -629,6 +684,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		00DC02471597EE9700F891C9 /* Build configuration list for PBXLegacyTarget "KraCommons Install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00DC02481597EE9700F891C9 /* Debug */,
+				00DC02491597EE9700F891C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
