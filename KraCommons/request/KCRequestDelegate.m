@@ -152,9 +152,9 @@
   }
   else 
   {
-    data = [NSJSONSerialization dataWithJSONObject: params 
-                                           options:NSJSONReadingAllowFragments 
-                                             error: nil];
+    data = params == nil ? nil :  [NSJSONSerialization dataWithJSONObject: params
+                                                                  options:NSJSONReadingAllowFragments
+                                                                    error: nil];
   }
 
   // and schedule the guy
