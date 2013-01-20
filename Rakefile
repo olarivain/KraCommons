@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'xcodebuilder'
 
+# x86 target
 x86Builder = XcodeBuilder::XcodeBuilder.new do |config|
   # basic workspace config
   config.build_dir = :derived
@@ -10,9 +11,9 @@ x86Builder = XcodeBuilder::XcodeBuilder.new do |config|
   config.sdk = "macosx"
   config.skip_clean = false
   config.verbose = false
-
 end
 
+# arm target, which will do the pod release
 armBuilder = XcodeBuilder::XcodeBuilder.new do |config|
   # basic workspace config
   config.build_dir = :derived
@@ -35,6 +36,7 @@ armBuilder = XcodeBuilder::XcodeBuilder.new do |config|
   end
 end
 
+desc "Full clean"
 task :clean do
 	# dump temp build folder
 	FileUtils.rm_rf "./build"
@@ -45,11 +47,12 @@ task :clean do
 	FileUtils.rm_rf "Podfile.lock"
 end
 
-# pod requires a full clean and runs pod install
+desc "pod requires a full clean and runs pod install"
 task :pod => :clean do
 	system "pod install"
 end
 
+desc "builds both targets and releases the pod"
 task :release => :pod do
 	x86Builder.build
 	armBuilder.pod_release
