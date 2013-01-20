@@ -26,6 +26,8 @@ armBuilder = XcodeBuilder::XcodeBuilder.new do |config|
   config.verbose = false
   config.increment_plist_version = true
   config.tag_vcs = true
+  config.pod_repo = "kra"
+  config.podspec_file = "KraCommons.podspec"
   
   # tag and release with git
   config.release_using(:git) do |git|
