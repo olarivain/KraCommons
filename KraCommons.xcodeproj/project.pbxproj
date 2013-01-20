@@ -37,6 +37,10 @@
 		0062B2771495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0062B2781495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */; };
 		0062B2791495AA2B00160289 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */; };
+		007232ED16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 007232EC16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h */; };
+		007232EE16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 007232EC16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h */; };
+		007232F116ABE2FF008C1623 /* KraCommons-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 007232F016ABE2FF008C1623 /* KraCommons-Prefix.pch */; };
+		007232F216ABE2FF008C1623 /* KraCommons-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 007232F016ABE2FF008C1623 /* KraCommons-Prefix.pch */; };
 		00823FC714AEA41400CEDDEB /* KCRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC114AEA41400CEDDEB /* KCRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00823FC814AEA41400CEDDEB /* KCRequestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC214AEA41400CEDDEB /* KCRequestDelegate.m */; };
 		00823FC914AEA41400CEDDEB /* KCRequestQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC314AEA41400CEDDEB /* KCRequestQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,7 +56,6 @@
 /* Begin PBXFileReference section */
 		000CE91414946E9B003002C3 /* libKraCommons-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libKraCommons-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		000CE91714946E9B003002C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		000CE91B14946E9B003002C3 /* KraCommons-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KraCommons-Prefix.pch"; sourceTree = "<group>"; };
 		000CE92D14946F24003002C3 /* libKraCommons-x86.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libKraCommons-x86.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		000CE92E14946F24003002C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		000CE93114946F24003002C3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -77,6 +80,8 @@
 		0062B2681495AA2B00160289 /* NSArray+BoundSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BoundSafe.m"; sourceTree = "<group>"; };
 		0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
 		0062B26D1495AA2B00160289 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
+		007232EC16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KraCommons-Pod-Prefix.h"; path = "Supporting Files/KraCommons-Pod-Prefix.h"; sourceTree = "<group>"; };
+		007232F016ABE2FF008C1623 /* KraCommons-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KraCommons-Prefix.pch"; path = "Supporting Files/KraCommons-Prefix.pch"; sourceTree = "<group>"; };
 		00823FC114AEA41400CEDDEB /* KCRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCRequestDelegate.h; sourceTree = "<group>"; };
 		00823FC214AEA41400CEDDEB /* KCRequestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCRequestDelegate.m; sourceTree = "<group>"; };
 		00823FC314AEA41400CEDDEB /* KCRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCRequestQueue.h; sourceTree = "<group>"; };
@@ -161,7 +166,8 @@
 		000CE91A14946E9B003002C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				000CE91B14946E9B003002C3 /* KraCommons-Prefix.pch */,
+				007232F016ABE2FF008C1623 /* KraCommons-Prefix.pch */,
+				007232EC16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -322,6 +328,8 @@
 				0082401914AF993700CEDDEB /* KCNibUtils.h in Headers */,
 				0062B2761495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */,
 				0082402E14AFA78000CEDDEB /* NSIndexPath+Key.h in Headers */,
+				007232ED16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h in Headers */,
+				007232F116ABE2FF008C1623 /* KraCommons-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +344,8 @@
 				000CE95914947101003002C3 /* KCDocumentStoreOperation.h in Headers */,
 				0062B26F1495AA2B00160289 /* NSArray+BoundSafe.h in Headers */,
 				0062B2771495AA2B00160289 /* NSDictionary+NilSafe.h in Headers */,
+				007232EE16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h in Headers */,
+				007232F216ABE2FF008C1623 /* KraCommons-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +458,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "KraCommons/Supporting Files/KraCommons-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -471,6 +482,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = "KraCommons/Supporting Files/KraCommons-Prefix.pch";
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -488,7 +500,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/KraCommons.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KraCommons/KraCommons-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = KraCommons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,7 +514,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/KraCommons.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KraCommons/KraCommons-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = KraCommons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,7 +534,6 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KraCommons-x86/KraCommons-x86-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -548,7 +557,6 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KraCommons-x86/KraCommons-x86-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRIVATE_HEADERS_FOLDER_PATH = KraCommons;

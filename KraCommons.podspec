@@ -1,4 +1,4 @@
-version = '0.0.5'
+version = '0.0.6'
 
 Pod::Spec.new do |s|
   s.name          = 'KraCommons'
@@ -43,6 +43,6 @@ DESC
   s.dependency    'AFNetworking', '>= 1.1.0'
   s.dependency    'CocoaLumberjack', '>= 1.6'
 
-  # s.prefix_header_file = "OTFoundation/Supporting Files/OTFoundation-Pod-Prefix.h"
+  s.prefix_header_file = "KraCommons/Supporting Files/KraCommons-Pod-Prefix.h"
   
 end
