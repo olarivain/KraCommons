@@ -4,6 +4,7 @@
 //  Created by Larivain, Olivier on 9/14/11.
 //
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
@@ -31,3 +32,4 @@
 @property (nonatomic, readwrite, assign) BOOL disabled;
 
 @end
+#endif

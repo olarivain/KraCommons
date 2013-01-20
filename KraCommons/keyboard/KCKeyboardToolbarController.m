@@ -3,7 +3,7 @@
 //
 //  Created by Larivain, Olivier on 9/14/11.
 //
-
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
 #import "KCKeyboardToolbarController.h"
 #import "KCAnimation.h"
 
@@ -56,7 +56,6 @@
 {
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center removeObserver: self];
-    [super dealloc];
 }
 
 @synthesize disabled;
@@ -210,3 +209,4 @@
 }
 
 @end
+#endif

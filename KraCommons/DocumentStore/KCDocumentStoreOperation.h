@@ -46,7 +46,7 @@ typedef void(^KCDocumentStoreCallback)(id);
 @property (nonatomic, readonly) NSData *data;
 @property (nonatomic, readonly) KCDocumentStoreOperationType type;
 @property (nonatomic, readonly) KCDocumentStoreOperationReadType readType;
-@property (nonatomic, readonly) KCDocumentStoreCallback callback;
+@property (strong, nonatomic, readonly) KCDocumentStoreCallback callback;
 
 - (BOOL) equals: (KCDocumentStoreOperation*) other;
 @end

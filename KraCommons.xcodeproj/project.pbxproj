@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		00DC020B1597D11600F891C9 /* KraCommons-iPhone-Universal */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 00DC020E1597D11600F891C9 /* Build configuration list for PBXAggregateTarget "KraCommons-iPhone-Universal" */;
-			buildPhases = (
-				00DC02101597D12300F891C9 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "KraCommons-iPhone-Universal";
-			productName = "KraCommons-Universal";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		000CE91814946E9B003002C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000CE91714946E9B003002C3 /* Foundation.framework */; };
 		000CE92F14946F24003002C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000CE92E14946F24003002C3 /* Cocoa.framework */; };
@@ -86,6 +72,7 @@
 		000CE95D1494728F003002C3 /* UIImage+Retina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Retina.h"; sourceTree = "<group>"; };
 		000CE95E1494728F003002C3 /* UIImage+Retina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Retina.m"; sourceTree = "<group>"; };
 		0028481814AFD099003F5818 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		00476D7D16ABCF3900DA749B /* KraCommons.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = KraCommons.podspec; sourceTree = "<group>"; };
 		0062B2671495AA2B00160289 /* NSArray+BoundSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BoundSafe.h"; sourceTree = "<group>"; };
 		0062B2681495AA2B00160289 /* NSArray+BoundSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BoundSafe.m"; sourceTree = "<group>"; };
 		0062B26C1495AA2B00160289 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
@@ -129,6 +116,7 @@
 				000CE93414946F24003002C3 /* KraCommons-x86 */,
 				000CE91614946E9B003002C3 /* Frameworks */,
 				000CE91514946E9B003002C3 /* Products */,
+				00476D7C16ABCF2A00DA749B /* Podspec */,
 				0028481814AFD099003F5818 /* Rakefile */,
 			);
 			sourceTree = "<group>";
@@ -253,6 +241,14 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		00476D7C16ABCF2A00DA749B /* Podspec */ = {
+			isa = PBXGroup;
+			children = (
+				00476D7D16ABCF3900DA749B /* KraCommons.podspec */,
+			);
+			path = Podspec;
+			sourceTree = "<group>";
+		};
 		0062B2661495AA2B00160289 /* Arrays */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,23 +341,6 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
-/* Begin PBXLegacyTarget section */
-		00DC02461597EE9700F891C9 /* KraCommons Install */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "build[${CONFIGURATION}] install";
-			buildConfigurationList = 00DC02471597EE9700F891C9 /* Build configuration list for PBXLegacyTarget "KraCommons Install" */;
-			buildPhases = (
-			);
-			buildToolPath = rake;
-			buildWorkingDirectory = "";
-			dependencies = (
-			);
-			name = "KraCommons Install";
-			passBuildSettingsInEnvironment = 1;
-			productName = "KraCommons Install";
-		};
-/* End PBXLegacyTarget section */
-
 /* Begin PBXNativeTarget section */
 		000CE91314946E9B003002C3 /* KraCommons-iPhone */ = {
 			isa = PBXNativeTarget;
@@ -419,28 +398,10 @@
 			projectRoot = "";
 			targets = (
 				000CE91314946E9B003002C3 /* KraCommons-iPhone */,
-				00DC020B1597D11600F891C9 /* KraCommons-iPhone-Universal */,
 				000CE92C14946F24003002C3 /* KraCommons-x86 */,
-				00DC02461597EE9700F891C9 /* KraCommons Install */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		00DC02101597D12300F891C9 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "xcodebuild -target KraCommons-iPhone -sdk iphoneos -configuration ${CONFIGURATION} BUILD_DIR=${BUILD_DIR}\nxcodebuild -target KraCommons-iPhone -sdk iphonesimulator -configuration ${CONFIGURATION} BUILD_DIR=${BUILD_DIR} -arch i386\n\nrm -rf ${BUILD_DIR}/Universal\nmkdir ${BUILD_DIR}/Universal\ncp -R ${BUILD_DIR}/${CONFIGURATION}-iphoneos/KraCommons/ ${BUILD_DIR}/Universal/KraCommons/\nlipo -create ${BUILD_DIR}/${CONFIGURATION}-iphoneos/libKraCommons-iPhone.a ${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/libKraCommons-iPhone.a -output ${BUILD_DIR}/Universal/libKraCommons-iPhone.a";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		000CE91014946E9B003002C3 /* Sources */ = {
@@ -524,6 +485,7 @@
 		000CE92214946E9B003002C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/KraCommons.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KraCommons/KraCommons-Prefix.pch";
@@ -538,6 +500,7 @@
 		000CE92314946E9B003002C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/KraCommons.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KraCommons/KraCommons-Prefix.pch";
@@ -595,57 +558,6 @@
 			};
 			name = Release;
 		};
-		00DC020C1597D11600F891C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		00DC020D1597D11600F891C9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		00DC02481597EE9700F891C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				DEBUGGING_SYMBOLS = YES;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		00DC02491597EE9700F891C9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -675,23 +587,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		00DC020E1597D11600F891C9 /* Build configuration list for PBXAggregateTarget "KraCommons-iPhone-Universal" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00DC020C1597D11600F891C9 /* Debug */,
-				00DC020D1597D11600F891C9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		00DC02471597EE9700F891C9 /* Build configuration list for PBXLegacyTarget "KraCommons Install" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00DC02481597EE9700F891C9 /* Debug */,
-				00DC02491597EE9700F891C9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

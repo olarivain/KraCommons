@@ -11,7 +11,7 @@
 #import "KCRequestQueueItem.h"
 
 @interface KCRequestDelegate()
-@property (nonatomic, readwrite, retain) NSString *host;
+@property (nonatomic, readwrite, strong) NSString *host;
 - (id) initWithHost: (NSString *) host 
             andPort: (NSInteger) port;
 @end
@@ -20,14 +20,14 @@
 
 + (id) requestDelegateWithHost: (NSString *) host
 {
-  return [[[KCRequestDelegate alloc] initWithHost: host andPort: 80] autorelease];  
+  return [[KCRequestDelegate alloc] initWithHost: host andPort: 80];  
 }
 
 + (id) requestDelegateWithHost: (NSString *) host 
                        andPort: (NSInteger) port
 {
-  return [[[KCRequestDelegate alloc] initWithHost: host 
-                                         andPort: port] autorelease];
+  return [[KCRequestDelegate alloc] initWithHost: host 
+                                         andPort: port];
 }
 
 - (id) initWithHost: (NSString *) aHost andPort: (NSInteger) aPort
@@ -41,10 +41,6 @@
   return self;
 }
 
-- (void) dealloc {
-    self.host = nil;
-    [super dealloc];
-}
 
 @synthesize host;
 

@@ -5,6 +5,7 @@
 //  Created by Larivain, Olivier on 12/31/11.
 //
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
 #import <UIKit/UIKit.h>
 #import "NSIndexPath+Key.h"
 
@@ -16,3 +17,4 @@
 }
 
 @end
+#endif

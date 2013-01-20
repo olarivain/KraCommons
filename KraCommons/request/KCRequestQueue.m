@@ -12,11 +12,11 @@
 static KCRequestQueue *sharedInstance;
 
 @interface KCRequestQueue()
-@property (nonatomic, readwrite, retain) NSMutableArray *pending;
-@property (nonatomic, readwrite, retain) NSMutableArray *active;
-@property (nonatomic, readwrite, retain) NSMutableArray *processing;
-@property (nonatomic, readwrite, retain) NSOperationQueue *requestOperationQueue;
-@property (nonatomic, readwrite, retain) NSOperationQueue *callbackOperationQueue;
+@property (nonatomic, readwrite, strong) NSMutableArray *pending;
+@property (nonatomic, readwrite, strong) NSMutableArray *active;
+@property (nonatomic, readwrite, strong) NSMutableArray *processing;
+@property (nonatomic, readwrite, strong) NSOperationQueue *requestOperationQueue;
+@property (nonatomic, readwrite, strong) NSOperationQueue *callbackOperationQueue;
 
 + (KCRequestQueue*) shardInstance;
 
@@ -63,24 +63,16 @@ static KCRequestQueue *sharedInstance;
     maxConcurrentRequests = 5;
     currentConcurrentRequests = 0;
     
-    self.requestOperationQueue = [[[NSOperationQueue alloc] init] autorelease];
+    self.requestOperationQueue = [[NSOperationQueue alloc] init];
     [requestOperationQueue setMaxConcurrentOperationCount: maxConcurrentRequests];
     
-    self.callbackOperationQueue = [[[NSOperationQueue alloc] init] autorelease];
+    self.callbackOperationQueue = [[NSOperationQueue alloc] init];
     [callbackOperationQueue setMaxConcurrentOperationCount: 2*maxConcurrentRequests];
   }
     
   return self;
 }
 
-- (void) dealloc {
-    self.pending = nil;
-    self.active = nil;
-    self.processing = nil;
-    self.requestOperationQueue = nil;
-    self.callbackOperationQueue = nil;
-    [super dealloc];
-}
 
 @synthesize pending;
 @synthesize active;

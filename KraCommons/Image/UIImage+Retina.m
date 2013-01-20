@@ -3,7 +3,7 @@
 //
 //  Created by Larivain, Olivier on 8/4/11.
 //
-
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
 #import "UIImage+Retina.h"
 
 static BOOL highPerformance;
@@ -119,3 +119,4 @@ static BOOL highPerformance;
     return newImage;
 }
 @end
+#endif

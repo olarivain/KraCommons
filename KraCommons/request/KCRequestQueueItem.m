@@ -10,15 +10,15 @@
 #import "KCRequestQueue.h"
 
 @interface KCRequestQueueItem()
-@property (nonatomic, readwrite, assign) KCRequestQueue *queue;
+@property (nonatomic, readwrite, weak) KCRequestQueue *queue;
 @property (nonatomic, readwrite, copy) KCRequestCallback callback;
-@property (nonatomic, readwrite, retain) NSURL *url;
-@property (nonatomic, readwrite, retain) NSData *requestData;
-@property (nonatomic, readwrite, retain) NSString *method;
-@property (nonatomic, readwrite, retain) NSURLConnection *connection;
-@property (nonatomic, readwrite, retain) NSURLResponse *response;
-@property (nonatomic, readwrite, retain) NSData *responseData;
-@property (nonatomic, readwrite, retain) NSError *error;
+@property (nonatomic, readwrite, strong) NSURL *url;
+@property (nonatomic, readwrite, strong) NSData *requestData;
+@property (nonatomic, readwrite, strong) NSString *method;
+@property (nonatomic, readwrite, strong) NSURLConnection *connection;
+@property (nonatomic, readwrite, strong) NSURLResponse *response;
+@property (nonatomic, readwrite, strong) NSData *responseData;
+@property (nonatomic, readwrite, strong) NSError *error;
 
 - (id) initWithQueue: (KCRequestQueue*) downloadQueue 
                  URL: (NSURL*) downloadURL 
@@ -47,11 +47,11 @@
                             data: (NSData *) data 
                      andCallback:(KCRequestCallback) requestCallback 
 {
-  return [[[KCRequestQueueItem alloc] initWithQueue: queue 
+  return [[KCRequestQueueItem alloc] initWithQueue: queue 
                                                URL: url 
                                             method: aMethod 
                                               data: data 
-                                       andCallback: requestCallback] autorelease];
+                                       andCallback: requestCallback];
 }
 
 - (id) initWithQueue: (KCRequestQueue*) downloadQueue 
@@ -74,16 +74,6 @@
   return self;
 }
 
-- (void) dealloc {
-    self.url = nil;
-    self.callback = nil;
-    self.responseData = nil;
-    self.error = nil;
-    self.requestData = nil;
-    self.method = nil;
-    self.cancellationKey = nil;
-    [super dealloc];
-}
 
 @synthesize url;
 @synthesize callback;
