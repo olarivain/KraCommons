@@ -51,12 +51,13 @@
 		0082401A14AF993700CEDDEB /* KCNibUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082401814AF993700CEDDEB /* KCNibUtils.m */; };
 		0082402E14AFA78000CEDDEB /* NSIndexPath+Key.h in Headers */ = {isa = PBXBuildFile; fileRef = 0082402C14AFA78000CEDDEB /* NSIndexPath+Key.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0082403014AFA78000CEDDEB /* NSIndexPath+Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082402D14AFA78000CEDDEB /* NSIndexPath+Key.m */; };
+		346309A786944BC899B70234 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7055BAB96E1D4F73A84A3BAD /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		000CE91414946E9B003002C3 /* libKraCommons-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libKraCommons-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000CE91414946E9B003002C3 /* libKraCommonsarm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKraCommonsarm.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		000CE91714946E9B003002C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		000CE92D14946F24003002C3 /* libKraCommons-x86.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libKraCommons-x86.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000CE92D14946F24003002C3 /* libKraCommonsx86.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKraCommonsx86.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		000CE92E14946F24003002C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		000CE93114946F24003002C3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		000CE93214946F24003002C3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -92,6 +93,8 @@
 		0082401814AF993700CEDDEB /* KCNibUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCNibUtils.m; sourceTree = "<group>"; };
 		0082402C14AFA78000CEDDEB /* NSIndexPath+Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSIndexPath+Key.h"; path = "KraCommons/indexpath/NSIndexPath+Key.h"; sourceTree = SOURCE_ROOT; };
 		0082402D14AFA78000CEDDEB /* NSIndexPath+Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSIndexPath+Key.m"; path = "KraCommons/indexpath/NSIndexPath+Key.m"; sourceTree = SOURCE_ROOT; };
+		7055BAB96E1D4F73A84A3BAD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F25A4A9B47654ADEB4480E6F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				000CE91814946E9B003002C3 /* Foundation.framework in Frameworks */,
+				346309A786944BC899B70234 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,14 +127,15 @@
 				000CE91514946E9B003002C3 /* Products */,
 				00476D7C16ABCF2A00DA749B /* Podspec */,
 				0028481814AFD099003F5818 /* Rakefile */,
+				F25A4A9B47654ADEB4480E6F /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		000CE91514946E9B003002C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				000CE91414946E9B003002C3 /* libKraCommons-iPhone.a */,
-				000CE92D14946F24003002C3 /* libKraCommons-x86.a */,
+				000CE91414946E9B003002C3 /* libKraCommonsarm.a */,
+				000CE92D14946F24003002C3 /* libKraCommonsx86.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 				000CE91714946E9B003002C3 /* Foundation.framework */,
 				000CE92E14946F24003002C3 /* Cocoa.framework */,
 				000CE93014946F24003002C3 /* Other Frameworks */,
+				7055BAB96E1D4F73A84A3BAD /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -352,26 +358,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		000CE91314946E9B003002C3 /* KraCommons-iPhone */ = {
+		000CE91314946E9B003002C3 /* KraCommonsarm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 000CE92114946E9B003002C3 /* Build configuration list for PBXNativeTarget "KraCommons-iPhone" */;
+			buildConfigurationList = 000CE92114946E9B003002C3 /* Build configuration list for PBXNativeTarget "KraCommonsarm" */;
 			buildPhases = (
 				000CE91014946E9B003002C3 /* Sources */,
 				000CE91114946E9B003002C3 /* Frameworks */,
 				000CE91214946E9B003002C3 /* Headers */,
+				A7FF65C1F9BD40ADBC69B180 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "KraCommons-iPhone";
+			name = KraCommonsarm;
 			productName = KraCommons;
-			productReference = 000CE91414946E9B003002C3 /* libKraCommons-iPhone.a */;
+			productReference = 000CE91414946E9B003002C3 /* libKraCommonsarm.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		000CE92C14946F24003002C3 /* KraCommons-x86 */ = {
+		000CE92C14946F24003002C3 /* KraCommonsx86 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 000CE93A14946F24003002C3 /* Build configuration list for PBXNativeTarget "KraCommons-x86" */;
+			buildConfigurationList = 000CE93A14946F24003002C3 /* Build configuration list for PBXNativeTarget "KraCommonsx86" */;
 			buildPhases = (
 				000CE92914946F24003002C3 /* Sources */,
 				000CE92A14946F24003002C3 /* Frameworks */,
@@ -381,9 +388,9 @@
 			);
 			dependencies = (
 			);
-			name = "KraCommons-x86";
+			name = KraCommonsx86;
 			productName = "KraCommons-x86";
-			productReference = 000CE92D14946F24003002C3 /* libKraCommons-x86.a */;
+			productReference = 000CE92D14946F24003002C3 /* libKraCommonsx86.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -407,11 +414,28 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				000CE91314946E9B003002C3 /* KraCommons-iPhone */,
-				000CE92C14946F24003002C3 /* KraCommons-x86 */,
+				000CE91314946E9B003002C3 /* KraCommonsarm */,
+				000CE92C14946F24003002C3 /* KraCommonsx86 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A7FF65C1F9BD40ADBC69B180 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		000CE91014946E9B003002C3 /* Sources */ = {
@@ -453,23 +477,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREFIX_HEADER = "KraCommons/Supporting Files/KraCommons-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = "";
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_CFLAGS = "-DDEBUG_NETWORK=1";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -479,16 +495,12 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "KraCommons/Supporting Files/KraCommons-Prefix.pch";
-				GCC_VERSION = "";
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -496,72 +508,46 @@
 		};
 		000CE92214946E9B003002C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25A4A9B47654ADEB4480E6F /* Pods.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				DSTROOT = /tmp/KraCommons.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRIVATE_HEADERS_FOLDER_PATH = KraCommons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = KraCommons;
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		000CE92314946E9B003002C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25A4A9B47654ADEB4480E6F /* Pods.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				DSTROOT = /tmp/KraCommons.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRIVATE_HEADERS_FOLDER_PATH = KraCommons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = KraCommons;
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 		000CE93B14946F24003002C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25A4A9B47654ADEB4480E6F /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				PRIVATE_HEADERS_FOLDER_PATH = KraCommons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = KraCommons;
 				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		000CE93C14946F24003002C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25A4A9B47654ADEB4480E6F /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRIVATE_HEADERS_FOLDER_PATH = KraCommons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = KraCommons;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -578,7 +564,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		000CE92114946E9B003002C3 /* Build configuration list for PBXNativeTarget "KraCommons-iPhone" */ = {
+		000CE92114946E9B003002C3 /* Build configuration list for PBXNativeTarget "KraCommonsarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				000CE92214946E9B003002C3 /* Debug */,
@@ -587,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		000CE93A14946F24003002C3 /* Build configuration list for PBXNativeTarget "KraCommons-x86" */ = {
+		000CE93A14946F24003002C3 /* Build configuration list for PBXNativeTarget "KraCommonsx86" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				000CE93B14946F24003002C3 /* Debug */,
