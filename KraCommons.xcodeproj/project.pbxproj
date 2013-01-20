@@ -530,7 +530,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F25A4A9B47654ADEB4480E6F /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -543,7 +543,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F25A4A9B47654ADEB4480E6F /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
