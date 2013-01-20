@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "000CE91314946E9B003002C3"
-               BuildableName = "libKraCommonsarm.a"
-               BlueprintName = "KraCommonsarm"
+               BuildableName = "libKraCommonsARM.a"
+               BlueprintName = "KraCommonsARM"
                ReferencedContainer = "container:KraCommons.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
