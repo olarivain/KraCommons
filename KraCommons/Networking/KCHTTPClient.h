@@ -12,5 +12,6 @@
 @interface KCHTTPClient : AFHTTPClient
 
 + (KCHTTPClient *) defaultClient;
+- (id)initWithBaseURL:(NSURL *)url;
 
 @end

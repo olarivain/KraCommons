@@ -21,6 +21,8 @@
 - (BOOL) boolForKey: (id)aKey;
 - (BOOL) boolFromStringForKey: (id)aKey;
 
+- (double) doubleForKey: (NSString *) key;
+
 - (CGFloat) floatForKey: (id)aKey;
 - (CGFloat) floatFromStringForKey: (id)aKey;
 

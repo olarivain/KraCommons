@@ -104,12 +104,12 @@
 		007235DC16ACC90D008C1623 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 007235DB16ACC90D008C1623 /* SystemConfiguration.framework */; };
 		007235DE16ACC9BE008C1623 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 007235DD16ACC9BE008C1623 /* MobileCoreServices.framework */; };
 		007235E016ACC9C4008C1623 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 007235DF16ACC9C4008C1623 /* SystemConfiguration.framework */; };
-		00823FC714AEA41400CEDDEB /* KCRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC114AEA41400CEDDEB /* KCRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		00823FC814AEA41400CEDDEB /* KCRequestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC214AEA41400CEDDEB /* KCRequestDelegate.m */; };
-		00823FC914AEA41400CEDDEB /* KCRequestQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC314AEA41400CEDDEB /* KCRequestQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		00823FCA14AEA41400CEDDEB /* KCRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC414AEA41400CEDDEB /* KCRequestQueue.m */; };
-		00823FCB14AEA41400CEDDEB /* KCRequestQueueItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 00823FC514AEA41400CEDDEB /* KCRequestQueueItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		00823FCC14AEA41400CEDDEB /* KCRequestQueueItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00823FC614AEA41400CEDDEB /* KCRequestQueueItem.m */; };
+		0072363F16AD046A008C1623 /* KCCarouselView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0072363916AD046A008C1623 /* KCCarouselView.h */; };
+		0072364016AD046A008C1623 /* KCCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0072363A16AD046A008C1623 /* KCCarouselView.m */; };
+		0072364116AD046A008C1623 /* KCTileFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 0072363B16AD046A008C1623 /* KCTileFrame.h */; };
+		0072364216AD046A008C1623 /* KCTileFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0072363C16AD046A008C1623 /* KCTileFrame.m */; };
+		0072364316AD046A008C1623 /* KCTileFrames.h in Headers */ = {isa = PBXBuildFile; fileRef = 0072363D16AD046A008C1623 /* KCTileFrames.h */; };
+		0072364416AD046A008C1623 /* KCTileFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = 0072363E16AD046A008C1623 /* KCTileFrames.m */; };
 		0082401914AF993700CEDDEB /* KCNibUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0082401714AF993700CEDDEB /* KCNibUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0082401A14AF993700CEDDEB /* KCNibUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082401814AF993700CEDDEB /* KCNibUtils.m */; };
 		0082402E14AFA78000CEDDEB /* NSIndexPath+Key.h in Headers */ = {isa = PBXBuildFile; fileRef = 0082402C14AFA78000CEDDEB /* NSIndexPath+Key.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -179,12 +179,12 @@
 		007235DD16ACC9BE008C1623 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		007235DF16ACC9C4008C1623 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		007235E716ACCA27008C1623 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		00823FC114AEA41400CEDDEB /* KCRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCRequestDelegate.h; sourceTree = "<group>"; };
-		00823FC214AEA41400CEDDEB /* KCRequestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCRequestDelegate.m; sourceTree = "<group>"; };
-		00823FC314AEA41400CEDDEB /* KCRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCRequestQueue.h; sourceTree = "<group>"; };
-		00823FC414AEA41400CEDDEB /* KCRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCRequestQueue.m; sourceTree = "<group>"; };
-		00823FC514AEA41400CEDDEB /* KCRequestQueueItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCRequestQueueItem.h; sourceTree = "<group>"; };
-		00823FC614AEA41400CEDDEB /* KCRequestQueueItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCRequestQueueItem.m; sourceTree = "<group>"; };
+		0072363916AD046A008C1623 /* KCCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCCarouselView.h; sourceTree = "<group>"; };
+		0072363A16AD046A008C1623 /* KCCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCCarouselView.m; sourceTree = "<group>"; };
+		0072363B16AD046A008C1623 /* KCTileFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCTileFrame.h; sourceTree = "<group>"; };
+		0072363C16AD046A008C1623 /* KCTileFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCTileFrame.m; sourceTree = "<group>"; };
+		0072363D16AD046A008C1623 /* KCTileFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCTileFrames.h; sourceTree = "<group>"; };
+		0072363E16AD046A008C1623 /* KCTileFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCTileFrames.m; sourceTree = "<group>"; };
 		0082401714AF993700CEDDEB /* KCNibUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCNibUtils.h; sourceTree = "<group>"; };
 		0082401814AF993700CEDDEB /* KCNibUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCNibUtils.m; sourceTree = "<group>"; };
 		0082402C14AFA78000CEDDEB /* NSIndexPath+Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSIndexPath+Key.h"; path = "KraCommons/indexpath/NSIndexPath+Key.h"; sourceTree = SOURCE_ROOT; };
@@ -265,13 +265,13 @@
 			children = (
 				000CE94014946FB7003002C3 /* Animations */,
 				000CE92814946EEB003002C3 /* Blocks */,
+				0072363816AD0469008C1623 /* Carousel */,
 				007235D416ACC78D008C1623 /* Configuration */,
 				000CE94914947101003002C3 /* DocumentStore */,
 				000CE95C1494728F003002C3 /* Image */,
 				0082402B14AFA76100CEDDEB /* IndexPath */,
 				007235BB16ACC6F9008C1623 /* Networking */,
 				0082401614AF993700CEDDEB /* Nib */,
-				00823FC014AEA41400CEDDEB /* Request */,
 				0072356E16ACC425008C1623 /* Foundation Categories */,
 				0072359F16ACC435008C1623 /* UIKit Categories */,
 				000CE91A14946E9B003002C3 /* Supporting Files */,
@@ -408,18 +408,17 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		00823FC014AEA41400CEDDEB /* Request */ = {
+		0072363816AD0469008C1623 /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
-				00823FC114AEA41400CEDDEB /* KCRequestDelegate.h */,
-				00823FC214AEA41400CEDDEB /* KCRequestDelegate.m */,
-				00823FC314AEA41400CEDDEB /* KCRequestQueue.h */,
-				00823FC414AEA41400CEDDEB /* KCRequestQueue.m */,
-				00823FC514AEA41400CEDDEB /* KCRequestQueueItem.h */,
-				00823FC614AEA41400CEDDEB /* KCRequestQueueItem.m */,
+				0072363916AD046A008C1623 /* KCCarouselView.h */,
+				0072363A16AD046A008C1623 /* KCCarouselView.m */,
+				0072363B16AD046A008C1623 /* KCTileFrame.h */,
+				0072363C16AD046A008C1623 /* KCTileFrame.m */,
+				0072363D16AD046A008C1623 /* KCTileFrames.h */,
+				0072363E16AD046A008C1623 /* KCTileFrames.m */,
 			);
-			name = Request;
-			path = request;
+			path = Carousel;
 			sourceTree = "<group>";
 		};
 		0082401614AF993700CEDDEB /* Nib */ = {
@@ -455,9 +454,6 @@
 				000CE95414947101003002C3 /* KCDocumentStoreFileBackend.h in Headers */,
 				000CE95814947101003002C3 /* KCDocumentStoreOperation.h in Headers */,
 				000CE95F1494728F003002C3 /* UIImage+Retina.h in Headers */,
-				00823FC714AEA41400CEDDEB /* KCRequestDelegate.h in Headers */,
-				00823FC914AEA41400CEDDEB /* KCRequestQueue.h in Headers */,
-				00823FCB14AEA41400CEDDEB /* KCRequestQueueItem.h in Headers */,
 				0082401914AF993700CEDDEB /* KCNibUtils.h in Headers */,
 				0082402E14AFA78000CEDDEB /* NSIndexPath+Key.h in Headers */,
 				007232ED16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h in Headers */,
@@ -480,6 +476,9 @@
 				007235CD16ACC6F9008C1623 /* KCHTTPClient.h in Headers */,
 				007235D116ACC6F9008C1623 /* KCWebRequestOperation.h in Headers */,
 				007235D816ACC78E008C1623 /* KCGlobalConfiguration.h in Headers */,
+				0072363F16AD046A008C1623 /* KCCarouselView.h in Headers */,
+				0072364116AD046A008C1623 /* KCTileFrame.h in Headers */,
+				0072364316AD046A008C1623 /* KCTileFrames.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,9 +620,6 @@
 				000CE95614947101003002C3 /* KCDocumentStoreFileBackend.m in Sources */,
 				000CE95A14947101003002C3 /* KCDocumentStoreOperation.m in Sources */,
 				000CE9601494728F003002C3 /* UIImage+Retina.m in Sources */,
-				00823FC814AEA41400CEDDEB /* KCRequestDelegate.m in Sources */,
-				00823FCA14AEA41400CEDDEB /* KCRequestQueue.m in Sources */,
-				00823FCC14AEA41400CEDDEB /* KCRequestQueueItem.m in Sources */,
 				0082401A14AF993700CEDDEB /* KCNibUtils.m in Sources */,
 				0082403014AFA78000CEDDEB /* NSIndexPath+Key.m in Sources */,
 				0072358216ACC425008C1623 /* NSArray+BoundSafe.m in Sources */,
@@ -643,6 +639,9 @@
 				007235CF16ACC6F9008C1623 /* KCHTTPClient.m in Sources */,
 				007235D316ACC6F9008C1623 /* KCWebRequestOperation.m in Sources */,
 				007235DA16ACC78E008C1623 /* KCGlobalConfiguration.m in Sources */,
+				0072364016AD046A008C1623 /* KCCarouselView.m in Sources */,
+				0072364216AD046A008C1623 /* KCTileFrame.m in Sources */,
+				0072364416AD046A008C1623 /* KCTileFrames.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

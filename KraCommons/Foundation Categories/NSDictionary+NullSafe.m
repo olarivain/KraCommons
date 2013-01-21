@@ -17,61 +17,61 @@
 @implementation NSDictionary (Additions)
 
 - (id) nullSafeForKey: (id) aKey {
-    id obj = [self objectForKey:aKey];
-    if(obj == [NSNull null]) {
-        return nil;
-    }
+	id obj = [self objectForKey:aKey];
+	if(obj == [NSNull null]) {
+		return nil;
+	}
 	
 	// our servers will return <null> instead of an actual JSON null, so deal with this here
 	if([obj isKindOfClass: NSString.class] && [(NSString *) obj isEqualToString: @"<null>"]) {
 		return nil;
 	}
 	
-    return obj;
+	return obj;
 }
 
 - (NSDictionary *) dictionaryForKey:(id)aKey {
 	id obj = [self nullSafeForKey:aKey];
-    if (obj==nil  || ![obj isKindOfClass: NSDictionary.class]) {
-        return nil;
-    }
-    
+	if (obj==nil  || ![obj isKindOfClass: NSDictionary.class]) {
+		return nil;
+	}
+	
 	return (NSDictionary *) obj;
 }
 
 - (NSDate*)dateForKey:(id)aKey {
-    id obj = [self nullSafeForKey:aKey];
-    if (obj==nil || ![obj isKindOfClass: NSString.class]) {
-        return nil;
-    }
-    
-    NSString *dateString = (NSString*)obj;
-    
-    // Pares date in format: 2011-02-03T17:43:43UTC
-    // 2012/12/28 OL: This used to be static, but NSDateFormatter is NOT thread safe
-    // and Apple advises against using it concurrently, hence changing it to a local var.
-    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    
-    // set the format and return a date from it
-    [dateFormatter setDateFormat: UNIVERSAL_DATE_TIME_FORMAT];
-    return [dateFormatter dateFromString:dateString];
+	id obj = [self nullSafeForKey:aKey];
+	if (obj==nil || ![obj isKindOfClass: NSString.class]) {
+		return nil;
+	}
+	
+	NSString *dateString = (NSString*)obj;
+	
+	// Pares date in format: 2011-02-03T17:43:43UTC
+	// 2012/12/28 OL: This used to be static, but NSDateFormatter is NOT thread safe
+	// and Apple advises against using it concurrently, hence changing it to a local var.
+	NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+	
+	// set the format and return a date from it
+	[dateFormatter setDateFormat: UNIVERSAL_DATE_TIME_FORMAT];
+	return [dateFormatter dateFromString:dateString];
 }
 
 - (NSURL*)urlForKey:(id)aKey {
-    id obj = [self nullSafeForKey:aKey];
-    if (obj == nil || ![obj isKindOfClass: NSString.class]) {
-        return nil;
-    }
-    return [NSURL URLWithString:obj];
+	id obj = [self nullSafeForKey:aKey];
+	if (obj == nil || ![obj isKindOfClass: NSString.class]) {
+		return nil;
+	}
+	return [NSURL URLWithString:obj];
 }
 
 - (NSNumber *) numberForKey:(id)aKey {
-    id value = [self nullSafeForKey: aKey];
-    if(value == nil || ![value isKindOfClass: NSNumber.class]) {
-        return nil;
-    }
-    
-    return (NSNumber *) value;
+	id value = [self nullSafeForKey: aKey];
+	if(value == nil || ![value isKindOfClass: NSNumber.class]) {
+		return nil;
+	}
+	
+	return (NSNumber *) value;
 }
 
 - (NSNumber *) numberFromStringForKey:(id)aKey {
@@ -92,33 +92,38 @@
 }
 
 - (BOOL) boolForKey: (id)aKey {
-    id value = [self numberForKey: aKey];
-    return value == nil ? NO :[(NSNumber *) value boolValue];
+	id value = [self numberForKey: aKey];
+	return value == nil ? NO :[(NSNumber *) value boolValue];
 }
 
 - (BOOL) boolFromStringForKey: (id)aKey {
 	id value = [self numberFromStringForKey: aKey];
-    return value == nil ? NO :[(NSNumber *) value boolValue];
+	return value == nil ? NO :[(NSNumber *) value boolValue];
 }
 
 - (CGFloat) floatForKey: (id)aKey {
-    id value = [self numberForKey: aKey];
-	return value == nil ? NO :[(NSNumber *) value floatValue];
+	id value = [self numberForKey: aKey];
+	return value == nil ? 0.0f :[(NSNumber *) value floatValue];
+}
+
+- (double) doubleForKey: (NSString *) key {
+	id value = [self numberForKey: key];
+	return value == nil ? 0.0f :[(NSNumber *) value doubleValue];
 }
 
 - (CGFloat) floatFromStringForKey:(id)aKey {
-    id value = [self numberFromStringForKey: aKey];
+	id value = [self numberFromStringForKey: aKey];
 	return value == nil ? NO :[(NSNumber *) value floatValue];
 }
 
 - (NSInteger) integerForKey: (id)aKey {
-    id value = [self numberForKey: aKey];
-    return value == nil ? NO :[(NSNumber *) value integerValue];
+	id value = [self numberForKey: aKey];
+	return value == nil ? NO :[(NSNumber *) value integerValue];
 }
 
 - (NSInteger) integerFromStringForKey: (id)aKey {
-    id value = [self numberFromStringForKey: aKey];
-    return value == nil ? NO :[(NSNumber *) value integerValue];
+	id value = [self numberFromStringForKey: aKey];
+	return value == nil ? NO :[(NSNumber *) value integerValue];
 }
 
 - (NSInteger) hexaIntegerForKey: (id)aKey {
@@ -132,28 +137,28 @@
 @implementation NSMutableDictionary (Additions)
 
 - (void) setBool: (BOOL) boolean forKey: (id)aKey {
-    NSNumber *number = [NSNumber numberWithBool: boolean];
-    [self safeSetObject: number forKey: aKey];
+	NSNumber *number = [NSNumber numberWithBool: boolean];
+	[self safeSetObject: number forKey: aKey];
 }
 
 - (void) setInteger: (NSInteger) integer forKey: (id)aKey {
-    NSNumber *number = [NSNumber numberWithInteger: integer];
-    [self safeSetObject: number forKey: aKey];
+	NSNumber *number = [NSNumber numberWithInteger: integer];
+	[self safeSetObject: number forKey: aKey];
 }
 
 - (void) setFloat: (CGFloat) value forKey: (id)aKey {
-    NSNumber *number = [NSNumber numberWithFloat:value];
-    [self safeSetObject: number forKey: aKey];
+	NSNumber *number = [NSNumber numberWithFloat:value];
+	[self safeSetObject: number forKey: aKey];
 }
 
 - (void) setLong: (long) value forKey: (id)aKey {
 	NSNumber *number = [NSNumber numberWithLong: value];
-    [self safeSetObject: number forKey: aKey];
+	[self safeSetObject: number forKey: aKey];
 }
 
 - (void) setDouble: (double) value forKey: (id)aKey {
 	NSNumber *number = [NSNumber numberWithDouble:value];
-    [self safeSetObject: number forKey: aKey];
+	[self safeSetObject: number forKey: aKey];
 }
 
 - (void)safeSetObject:(id)obj forKey:(id)aKey {
@@ -161,16 +166,16 @@
 }
 
 - (void)setObjectNilSafe:(id)obj forKey:(id)aKey {
-    // skip nils and NSNull
-    if(obj == nil || obj == [NSNull null]) {
-        return;
-    }
-    
-    // skip empty string
-    if([obj isKindOfClass: NSString.class] && [obj length]==0) {
-        return;
-    }
-    
-    [self setObject:obj forKey:aKey];
+	// skip nils and NSNull
+	if(obj == nil || obj == [NSNull null]) {
+		return;
+	}
+	
+	// skip empty string
+	if([obj isKindOfClass: NSString.class] && [obj length]==0) {
+		return;
+	}
+	
+	[self setObject:obj forKey:aKey];
 }
 @end
