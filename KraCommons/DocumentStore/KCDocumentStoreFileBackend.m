@@ -106,7 +106,7 @@
     // and write it to disk
     BOOL success = [fileManager createFileAtPath: filePath contents: data attributes: nil];
     if(!success) {
-        NSLog(@"**** FATAL **** could not write document with id: %@", documentId);
+        DDLogWarn(@"**** FATAL **** could not write document with id: %@", documentId);
     }
 }
 
@@ -128,7 +128,7 @@
     
     // log error, but don't throw exception.
     if(error) {
-        NSLog(@"**** FATAL **** could not delete document with id: %@", error);
+        DDLogWarn(@"**** FATAL **** could not delete document with id: %@", error);
     }
 }
 
@@ -140,7 +140,7 @@
     NSError *error = nil;
     NSDictionary *attributes = [fileManager attributesOfItemAtPath: filePath error: &error];
     if(error) {
-        NSLog(@"**** Warning **** could not get FS attributes for docuemnt %@", filePath);
+        DDLogWarn(@"**** Warning **** could not get FS attributes for docuemnt %@", filePath);
         return nil;
     }
     
@@ -164,7 +164,7 @@
     
     // log error, but don't throw exception.
     if(error) {
-        NSLog(@"**** ERROR **** could not read document with id %@:\n%@\n%@", documentId, [error localizedDescription], [error localizedFailureReason]);
+        DDLogError(@"**** ERROR **** could not read document with id %@:\n%@\n%@", documentId, [error localizedDescription], [error localizedFailureReason]);
     }
     
     return  data;
@@ -180,21 +180,15 @@
         return;
     }
     
-    // create an array holding all path components (i.e. NOT containing the file name)
-#warning what about NSString removeLastPathComponent?
-    NSMutableArray *components = [NSMutableArray arrayWithObject: storePath];
-    [components addObjectsFromArray: pathElements];
-    [components removeLastObject];
-    
-    // create folder name by joining array elements
-    NSString *pathToFolder = [NSString pathWithComponents: components];
+    // create folder name by removing the last path ocmponent
+    NSString *pathToFolder = [storePath stringByDeletingLastPathComponent];
     
     // and create folder
     NSError *error = nil;
     [fileManager createDirectoryAtPath: pathToFolder withIntermediateDirectories: YES attributes: nil error:&error];
     // same as usual, log but don't throw exception
     if(error) {
-        NSLog(@"**** FATAL ***** could not create path to folder: %@", storePath);
+        DDLogWarn(@"**** FATAL ***** could not create path to folder: %@", storePath);
     }
 }
 

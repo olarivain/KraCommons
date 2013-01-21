@@ -10,15 +10,8 @@
 
 static NSString *deviceSuffix;
 
-@interface KCNibUtils(private)
-+ (NSString*) deviceSuffix;
-@end
 @implementation KCNibUtils
 
-+ (BOOL) isiPad
-{
-  return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
-}
 
 + (NSString*) deviceSuffix
 {

@@ -3,6 +3,7 @@
 //
 
 #ifdef __OBJC__
-  #import <Foundation/Foundation.h>
-#import "KraCommons-Pod-Prefix.h"
+	#import <Foundation/Foundation.h>
+	#import <CoreGraphics/CoreGraphics.h>
+	#import "KraCommons-Pod-Prefix.h"
 #endif
