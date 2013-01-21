@@ -11,6 +11,7 @@
 		#import <MobileCoreServices/MobileCoreServices.h>
 		#import "NSError+Alert.h"
 		#import "UIDeviceSupport.h"
+		#import "UITableView+NibRegistration.h"
 	#endif
 
 	#import <CocoaLumberJack/DDLog.h>

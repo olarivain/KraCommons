@@ -110,6 +110,8 @@
 		0072364216AD046A008C1623 /* KCTileFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0072363C16AD046A008C1623 /* KCTileFrame.m */; };
 		0072364316AD046A008C1623 /* KCTileFrames.h in Headers */ = {isa = PBXBuildFile; fileRef = 0072363D16AD046A008C1623 /* KCTileFrames.h */; };
 		0072364416AD046A008C1623 /* KCTileFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = 0072363E16AD046A008C1623 /* KCTileFrames.m */; };
+		007236FA16AD4857008C1623 /* UITableView+NibRegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = 007236F816AD4857008C1623 /* UITableView+NibRegistration.h */; };
+		007236FB16AD4857008C1623 /* UITableView+NibRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 007236F916AD4857008C1623 /* UITableView+NibRegistration.m */; };
 		0082401914AF993700CEDDEB /* KCNibUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0082401714AF993700CEDDEB /* KCNibUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0082401A14AF993700CEDDEB /* KCNibUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082401814AF993700CEDDEB /* KCNibUtils.m */; };
 		0082402E14AFA78000CEDDEB /* NSIndexPath+Key.h in Headers */ = {isa = PBXBuildFile; fileRef = 0082402C14AFA78000CEDDEB /* NSIndexPath+Key.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -185,6 +187,8 @@
 		0072363C16AD046A008C1623 /* KCTileFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCTileFrame.m; sourceTree = "<group>"; };
 		0072363D16AD046A008C1623 /* KCTileFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCTileFrames.h; sourceTree = "<group>"; };
 		0072363E16AD046A008C1623 /* KCTileFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCTileFrames.m; sourceTree = "<group>"; };
+		007236F816AD4857008C1623 /* UITableView+NibRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+NibRegistration.h"; sourceTree = "<group>"; };
+		007236F916AD4857008C1623 /* UITableView+NibRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+NibRegistration.m"; sourceTree = "<group>"; };
 		0082401714AF993700CEDDEB /* KCNibUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCNibUtils.h; sourceTree = "<group>"; };
 		0082401814AF993700CEDDEB /* KCNibUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCNibUtils.m; sourceTree = "<group>"; };
 		0082402C14AFA78000CEDDEB /* NSIndexPath+Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSIndexPath+Key.h"; path = "KraCommons/indexpath/NSIndexPath+Key.h"; sourceTree = SOURCE_ROOT; };
@@ -380,6 +384,8 @@
 				007235A416ACC435008C1623 /* UIDeviceSupport.h */,
 				007235A516ACC435008C1623 /* UIImage+extensions.h */,
 				007235A616ACC435008C1623 /* UIImage+extensions.m */,
+				007236F816AD4857008C1623 /* UITableView+NibRegistration.h */,
+				007236F916AD4857008C1623 /* UITableView+NibRegistration.m */,
 			);
 			path = "UIKit Categories";
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 				0072363F16AD046A008C1623 /* KCCarouselView.h in Headers */,
 				0072364116AD046A008C1623 /* KCTileFrame.h in Headers */,
 				0072364316AD046A008C1623 /* KCTileFrames.h in Headers */,
+				007236FA16AD4857008C1623 /* UITableView+NibRegistration.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +649,7 @@
 				0072364016AD046A008C1623 /* KCCarouselView.m in Sources */,
 				0072364216AD046A008C1623 /* KCTileFrame.m in Sources */,
 				0072364416AD046A008C1623 /* KCTileFrames.m in Sources */,
+				007236FB16AD4857008C1623 /* UITableView+NibRegistration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
