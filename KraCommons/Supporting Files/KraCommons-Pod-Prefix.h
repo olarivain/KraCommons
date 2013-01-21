@@ -12,6 +12,7 @@
 		#import "NSError+Alert.h"
 		#import "UIDeviceSupport.h"
 		#import "UITableView+NibRegistration.h"
+		#import "KCAnimation.h"
 	#endif
 
 	#import <CocoaLumberJack/DDLog.h>
