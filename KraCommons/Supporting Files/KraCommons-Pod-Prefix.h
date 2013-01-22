@@ -13,6 +13,7 @@
 		#import "UIDeviceSupport.h"
 		#import "UITableView+NibRegistration.h"
 		#import "KCAnimation.h"
+		#import "KCNibUtils.h"
 	#endif
 
 	#import <CocoaLumberJack/DDLog.h>

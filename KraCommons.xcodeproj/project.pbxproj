@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0000C0BD16AE36950009BE81 /* UIView+FirstResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000C0BB16AE36950009BE81 /* UIView+FirstResponder.h */; };
+		0000C0BE16AE36950009BE81 /* UIView+FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000C0BC16AE36950009BE81 /* UIView+FirstResponder.m */; };
 		000CE91814946E9B003002C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000CE91714946E9B003002C3 /* Foundation.framework */; };
 		000CE92F14946F24003002C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000CE92E14946F24003002C3 /* Cocoa.framework */; };
 		000CE93E14946F7D003002C3 /* KCBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE93D14946F7D003002C3 /* KCBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -120,6 +122,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0000C0BB16AE36950009BE81 /* UIView+FirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FirstResponder.h"; sourceTree = "<group>"; };
+		0000C0BC16AE36950009BE81 /* UIView+FirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FirstResponder.m"; sourceTree = "<group>"; };
 		000CE91414946E9B003002C3 /* libKraCommonsARM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKraCommonsARM.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		000CE91714946E9B003002C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		000CE92D14946F24003002C3 /* libKraCommonsx86.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKraCommonsx86.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -386,6 +390,8 @@
 				007235A616ACC435008C1623 /* UIImage+extensions.m */,
 				007236F816AD4857008C1623 /* UITableView+NibRegistration.h */,
 				007236F916AD4857008C1623 /* UITableView+NibRegistration.m */,
+				0000C0BB16AE36950009BE81 /* UIView+FirstResponder.h */,
+				0000C0BC16AE36950009BE81 /* UIView+FirstResponder.m */,
 			);
 			path = "UIKit Categories";
 			sourceTree = "<group>";
@@ -486,6 +492,7 @@
 				0072364116AD046A008C1623 /* KCTileFrame.h in Headers */,
 				0072364316AD046A008C1623 /* KCTileFrames.h in Headers */,
 				007236FA16AD4857008C1623 /* UITableView+NibRegistration.h in Headers */,
+				0000C0BD16AE36950009BE81 /* UIView+FirstResponder.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +574,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = Edmunds;
+				ORGANIZATIONNAME = kra;
 			};
 			buildConfigurationList = 000CE90E14946E9B003002C3 /* Build configuration list for PBXProject "KraCommons" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -650,6 +657,7 @@
 				0072364216AD046A008C1623 /* KCTileFrame.m in Sources */,
 				0072364416AD046A008C1623 /* KCTileFrames.m in Sources */,
 				007236FB16AD4857008C1623 /* UITableView+NibRegistration.m in Sources */,
+				0000C0BE16AE36950009BE81 /* UIView+FirstResponder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
