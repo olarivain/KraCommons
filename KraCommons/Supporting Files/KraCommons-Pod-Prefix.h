@@ -14,6 +14,7 @@
 		#import "UITableView+NibRegistration.h"
 		#import "KCAnimation.h"
 		#import "KCNibUtils.h"
+		#import "UIView+FirstResponder.h"
 	#endif
 
 	#import <CocoaLumberJack/DDLog.h>
