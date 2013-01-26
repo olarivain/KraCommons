@@ -29,6 +29,7 @@
 		000CE95B14947101003002C3 /* KCDocumentStoreOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE94F14947101003002C3 /* KCDocumentStoreOperation.m */; };
 		000CE95F1494728F003002C3 /* UIImage+Retina.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE95D1494728F003002C3 /* UIImage+Retina.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		000CE9601494728F003002C3 /* UIImage+Retina.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE95E1494728F003002C3 /* UIImage+Retina.m */; };
+		0069FB0816B3CD57001CF155 /* KCInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC7ABB16AE3CDB006096A9 /* KCInputViewController.m */; };
 		007232ED16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 007232EC16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h */; };
 		007232EE16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 007232EC16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h */; };
 		007232F116ABE2FF008C1623 /* KraCommons-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 007232F016ABE2FF008C1623 /* KraCommons-Prefix.pch */; };
@@ -701,6 +702,7 @@
 				007235CE16ACC6F9008C1623 /* KCHTTPClient.m in Sources */,
 				007235D216ACC6F9008C1623 /* KCWebRequestOperation.m in Sources */,
 				007235D916ACC78E008C1623 /* KCGlobalConfiguration.m in Sources */,
+				0069FB0816B3CD57001CF155 /* KCInputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

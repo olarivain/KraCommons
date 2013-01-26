@@ -5,6 +5,7 @@
 //  Created by Olivier Larivain on 1/22/13.
 //  Copyright (c) 2013 OpenTable, Inc. All rights reserved.
 //
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
 
 #import "KCInputViewController.h"
 
@@ -329,3 +330,5 @@
 
 
 @end
+
+#endif
