@@ -5,6 +5,7 @@
 //  Created by Olivier Larivain on 1/21/13.
 //  Copyright (c) 2013 Edmunds. All rights reserved.
 //
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
 
 #import "UIView+FirstResponder.h"
 
@@ -32,3 +33,5 @@
 }
 
 @end
+
+#endif

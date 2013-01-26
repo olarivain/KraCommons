@@ -52,6 +52,12 @@ task :pod => :clean do
 	system "pod install"
 end
 
+desc "builds both targets"
+task :build => :pod do
+  x86Builder.build
+  armBuilder.build
+end
+
 desc "builds both targets and releases the pod"
 task :release => :pod do
 	x86Builder.build

@@ -756,6 +756,7 @@
 		};
 		000CE92314946E9B003002C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 007235E716ACCA27008C1623 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -779,6 +780,7 @@
 		};
 		000CE93C14946F24003002C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 007235E716ACCA27008C1623 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
