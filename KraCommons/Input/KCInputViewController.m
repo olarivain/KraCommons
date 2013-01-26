@@ -129,10 +129,8 @@
 	
 	// we don't need to touch anything, call it a day.
 	if(_didInsetScrollView && !updateContentOffset) {
-		DDLogInfo(@"Not touching.");
 		return;
 	}
-	DDLogInfo(@"Touching.");
 	
 	CGPoint contentOffset = self.scrollView.contentOffset;
 	if(updateContentOffset) {
