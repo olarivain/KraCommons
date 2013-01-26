@@ -4,17 +4,17 @@
   <dict>
     <key>CFBundleSignature</key>
     <string>????</string>
-    <key>LSRequiresIPhoneOS</key>
-    <false/>
-    <key>CFBundleShortVersionString</key>
-    <string>0.0</string>
-    <key>CFBundleDevelopmentRegion</key>
-    <string>en</string>
-    <key>CFBundlePackageType</key>
-    <string>APPL</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
+    <key>CFBundleShortVersionString</key>
+    <string>0.0</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>LSRequiresIPhoneOS</key>
+    <false/>
     <key>CFBundleVersion</key>
-    <string>0.0.12</string>
+    <string>0.0.13</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
   </dict>
 </plist>
