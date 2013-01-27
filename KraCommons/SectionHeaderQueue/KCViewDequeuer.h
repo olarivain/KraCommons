@@ -14,6 +14,7 @@
 
 - (void) registerNibName: (NSString *) nibName forReuseIdentifier: (NSString *) reuseId;
 - (UIView *) dequeueReusableViewWithIdentifier: (NSString *) reuseId;
+- (UIView *) loadViewWithIdentifier: (NSString *) reuseIdentifier;
 
 @end
 

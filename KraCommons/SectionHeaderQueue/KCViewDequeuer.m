@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) NSMutableDictionary *nibNames;
 @property (strong, nonatomic) NSMutableDictionary *allSections;
+@property (strong, nonatomic) NSMutableDictionary *availableViews;
 
 @end
 
@@ -28,15 +29,6 @@
 		self.allSections = [NSMutableDictionary dictionaryWithCapacity: 10];
 	}
 	return self;
-}
-
-- (void) dealloc {
-	for(NSMutableArray *views in [self.allSections allValues]) {
-		for(UIView *view in views) {
-			[view removeObserver: self
-					  forKeyPath: @"superview"];
-		}
-	}
 }
 
 #pragma mark - Nib Registration
@@ -54,22 +46,14 @@
 - (UIView *) dequeueReusableViewWithIdentifier: (NSString *) reuseId {
 	UIView *dequeued = [self availableHeaderWithReuseIdentifier: reuseId];
 	if(dequeued != nil) {
+		// tell the view it's about to be reused
+		if([dequeued respondsToSelector: @selector(prepareForReuse)]) {
+			[dequeued performSelector: @selector(prepareForReuse)];
+		}
 		return dequeued;
 	}
 	
-	// get the nib and ensure we have one
-	UINib *nib = [self.nibNames objectForKey: reuseId];
-	if(nib == nil) {
-		@throw [NSException exceptionWithName: @"NSInfernalConsistency"
-									   reason: [NSString stringWithFormat: @"No nib registered for reuseID %@", reuseId]
-									 userInfo: nil];
-	}
-	
-	// instantiate the view
-	[nib instantiateWithOwner: self
-					  options: nil];
-	dequeued = self.view;
-	self.view = nil;
+	dequeued = [self loadViewWithIdentifier: reuseId];
 	
 	// add the view to the view list, creating the backing array if needed
 	NSMutableArray *viewList = [self.allSections objectForKey: reuseId];
@@ -79,13 +63,25 @@
 	}
 	[viewList addObject: dequeued];
 	
-	// we'll want to listen to changes to superview, so we can call "-prepareForReuse" if needed
-	[dequeued addObserver: self
-			   forKeyPath: @"superview"
-				  options: 0
-				  context: nil];
-	
 	return dequeued;
+}
+
+- (UIView *) loadViewWithIdentifier: (NSString *) reuseIdentifier {
+	// get the nib and ensure we have one
+	UINib *nib = [self.nibNames objectForKey: reuseIdentifier];
+	if(nib == nil) {
+		@throw [NSException exceptionWithName: @"NSInfernalConsistency"
+									   reason: [NSString stringWithFormat: @"No nib registered for reuseID %@", reuseIdentifier]
+									 userInfo: nil];
+	}
+	
+	// instantiate the view
+	[nib instantiateWithOwner: self
+					  options: nil];
+	UIView *created = self.view;
+	self.view = nil;
+	
+	return created;
 }
 
 - (UIView *) availableHeaderWithReuseIdentifier: (NSString *) reuseId {
@@ -94,16 +90,6 @@
 		return obj.superview == nil;
 	}];
 	return [availableViews boundSafeObjectAtIndex: index];
-}
-
-#pragma mark - KVC observing
-- (void) observeValueForKeyPath:(NSString *)keyPath
-					   ofObject:(id)object
-						 change:(NSDictionary *)change
-						context:(void *)context {
-	if([object respondsToSelector: @selector(prepareForReuse)]) {
-		[object performSelector: @selector(prepareForReuse)];
-	}
 }
 
 @end
