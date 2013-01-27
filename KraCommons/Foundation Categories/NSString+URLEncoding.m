@@ -26,6 +26,6 @@
     // self is considered to be a valid, URL encoded string
     return  (NSString*) CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapes(NULL,
                                                                                      (CFStringRef)self,
-                                                                                     CFSTR("!*'();:@&=+$,/?%#[]")));
+                                                                                     CFSTR("")));
 }
 @end
