@@ -30,6 +30,15 @@
 		000CE95F1494728F003002C3 /* UIImage+Retina.h in Headers */ = {isa = PBXBuildFile; fileRef = 000CE95D1494728F003002C3 /* UIImage+Retina.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		000CE9601494728F003002C3 /* UIImage+Retina.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE95E1494728F003002C3 /* UIImage+Retina.m */; };
 		0069FB0816B3CD57001CF155 /* KCInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC7ABB16AE3CDB006096A9 /* KCInputViewController.m */; };
+		0069FB6F16B4B161001CF155 /* UIImage+Retina.m in Sources */ = {isa = PBXBuildFile; fileRef = 000CE95E1494728F003002C3 /* UIImage+Retina.m */; };
+		0069FB7016B4B161001CF155 /* NSIndexPath+Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082402D14AFA78000CEDDEB /* NSIndexPath+Key.m */; };
+		0069FB7116B4B161001CF155 /* KCNibUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082401814AF993700CEDDEB /* KCNibUtils.m */; };
+		0069FB7216B4B161001CF155 /* UITableView+NibRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 007236F916AD4857008C1623 /* UITableView+NibRegistration.m */; };
+		0069FB7316B4B161001CF155 /* UIView+FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000C0BC16AE36950009BE81 /* UIView+FirstResponder.m */; };
+		0069FB7F16B4B242001CF155 /* KCViewDequeuer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0069FB7D16B4B242001CF155 /* KCViewDequeuer.h */; };
+		0069FB8016B4B242001CF155 /* KCViewDequeuer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0069FB7D16B4B242001CF155 /* KCViewDequeuer.h */; };
+		0069FB8116B4B242001CF155 /* KCViewDequeuer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0069FB7E16B4B242001CF155 /* KCViewDequeuer.m */; };
+		0069FB8216B4B242001CF155 /* KCViewDequeuer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0069FB7E16B4B242001CF155 /* KCViewDequeuer.m */; };
 		007232ED16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 007232EC16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h */; };
 		007232EE16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 007232EC16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h */; };
 		007232F116ABE2FF008C1623 /* KraCommons-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 007232F016ABE2FF008C1623 /* KraCommons-Prefix.pch */; };
@@ -121,7 +130,6 @@
 		0082403014AFA78000CEDDEB /* NSIndexPath+Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082402D14AFA78000CEDDEB /* NSIndexPath+Key.m */; };
 		00AC7ABC16AE3CDB006096A9 /* KCInputViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 00AC7ABA16AE3CDB006096A9 /* KCInputViewController.h */; };
 		00AC7ABD16AE3CDB006096A9 /* KCInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC7ABB16AE3CDB006096A9 /* KCInputViewController.m */; };
-		A15EC0B870674B0B90E1952F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D446ADD9C9DE4B2A8E05D198 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +154,8 @@
 		000CE95E1494728F003002C3 /* UIImage+Retina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Retina.m"; sourceTree = "<group>"; };
 		0028481814AFD099003F5818 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		00476D7D16ABCF3900DA749B /* KraCommons.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = KraCommons.podspec; sourceTree = "<group>"; };
+		0069FB7D16B4B242001CF155 /* KCViewDequeuer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCViewDequeuer.h; sourceTree = "<group>"; };
+		0069FB7E16B4B242001CF155 /* KCViewDequeuer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCViewDequeuer.m; sourceTree = "<group>"; };
 		007232EC16ABE2F0008C1623 /* KraCommons-Pod-Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KraCommons-Pod-Prefix.h"; path = "Supporting Files/KraCommons-Pod-Prefix.h"; sourceTree = "<group>"; };
 		007232F016ABE2FF008C1623 /* KraCommons-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KraCommons-Prefix.pch"; path = "Supporting Files/KraCommons-Prefix.pch"; sourceTree = "<group>"; };
 		0072336916AC0B40008C1623 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = Pods/build/Release/libPods.a; sourceTree = "<group>"; };
@@ -226,7 +236,6 @@
 			files = (
 				007235DC16ACC90D008C1623 /* SystemConfiguration.framework in Frameworks */,
 				000CE92F14946F24003002C3 /* Cocoa.framework in Frameworks */,
-				A15EC0B870674B0B90E1952F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +245,6 @@
 		000CE90914946E9B003002C3 = {
 			isa = PBXGroup;
 			children = (
-				0072336916AC0B40008C1623 /* libPods.a */,
 				000CE91914946E9B003002C3 /* KraCommons */,
 				000CE91614946E9B003002C3 /* Frameworks */,
 				000CE91514946E9B003002C3 /* Products */,
@@ -258,6 +266,7 @@
 		000CE91614946E9B003002C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0072336916AC0B40008C1623 /* libPods.a */,
 				007235DF16ACC9C4008C1623 /* SystemConfiguration.framework */,
 				007235DD16ACC9BE008C1623 /* MobileCoreServices.framework */,
 				007235DB16ACC90D008C1623 /* SystemConfiguration.framework */,
@@ -287,6 +296,7 @@
 				007235BB16ACC6F9008C1623 /* Networking */,
 				0082401614AF993700CEDDEB /* Nib */,
 				0072356E16ACC425008C1623 /* Foundation Categories */,
+				0069FB7B16B4B227001CF155 /* SectionHeaderQueue */,
 				0072359F16ACC435008C1623 /* UIKit Categories */,
 				000CE91A14946E9B003002C3 /* Supporting Files */,
 			);
@@ -357,6 +367,15 @@
 				00476D7D16ABCF3900DA749B /* KraCommons.podspec */,
 			);
 			path = Podspec;
+			sourceTree = "<group>";
+		};
+		0069FB7B16B4B227001CF155 /* SectionHeaderQueue */ = {
+			isa = PBXGroup;
+			children = (
+				0069FB7D16B4B242001CF155 /* KCViewDequeuer.h */,
+				0069FB7E16B4B242001CF155 /* KCViewDequeuer.m */,
+			);
+			path = SectionHeaderQueue;
 			sourceTree = "<group>";
 		};
 		0072356E16ACC425008C1623 /* Foundation Categories */ = {
@@ -509,6 +528,7 @@
 				007236FA16AD4857008C1623 /* UITableView+NibRegistration.h in Headers */,
 				0000C0BD16AE36950009BE81 /* UIView+FirstResponder.h in Headers */,
 				00AC7ABC16AE3CDB006096A9 /* KCInputViewController.h in Headers */,
+				0069FB8016B4B242001CF155 /* KCViewDequeuer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +561,7 @@
 				007235CC16ACC6F9008C1623 /* KCHTTPClient.h in Headers */,
 				007235D016ACC6F9008C1623 /* KCWebRequestOperation.h in Headers */,
 				007235D716ACC78E008C1623 /* KCGlobalConfiguration.h in Headers */,
+				0069FB7F16B4B242001CF155 /* KCViewDequeuer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +696,7 @@
 				007236FB16AD4857008C1623 /* UITableView+NibRegistration.m in Sources */,
 				0000C0BE16AE36950009BE81 /* UIView+FirstResponder.m in Sources */,
 				00AC7ABD16AE3CDB006096A9 /* KCInputViewController.m in Sources */,
+				0069FB8216B4B242001CF155 /* KCViewDequeuer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +704,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0069FB6F16B4B161001CF155 /* UIImage+Retina.m in Sources */,
+				0069FB7016B4B161001CF155 /* NSIndexPath+Key.m in Sources */,
+				0069FB7116B4B161001CF155 /* KCNibUtils.m in Sources */,
+				0069FB7216B4B161001CF155 /* UITableView+NibRegistration.m in Sources */,
+				0069FB7316B4B161001CF155 /* UIView+FirstResponder.m in Sources */,
 				000CE95314947101003002C3 /* KCDocumentStore.m in Sources */,
 				000CE95714947101003002C3 /* KCDocumentStoreFileBackend.m in Sources */,
 				000CE95B14947101003002C3 /* KCDocumentStoreOperation.m in Sources */,
@@ -703,6 +730,7 @@
 				007235D216ACC6F9008C1623 /* KCWebRequestOperation.m in Sources */,
 				007235D916ACC78E008C1623 /* KCGlobalConfiguration.m in Sources */,
 				0069FB0816B3CD57001CF155 /* KCInputViewController.m in Sources */,
+				0069FB8116B4B242001CF155 /* KCViewDequeuer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,6 +803,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -788,6 +817,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
