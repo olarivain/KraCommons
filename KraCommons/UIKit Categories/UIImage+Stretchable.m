@@ -6,9 +6,9 @@
 //  Copyright 2009 kra. All rights reserved.
 //
 #if __IPHONE_OS_VERSION_MIN_REQUIRED
-#import "UIImage+extensions.h"
+#import "UIImage+Stretchable.h"
 
-@implementation UIImage (UIImage_extensions)
+@implementation UIImage (Stretchable)
 - (UIImage *)stretchableImageWithDefaultCaps {
 	return [self stretchableImageWithLeftCapWidth:(self.size.width / 2) topCapHeight:(self.size.height / 2)];
 }

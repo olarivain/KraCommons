@@ -85,10 +85,10 @@
 		007235AE16ACC435008C1623 /* UIDevice+extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 007235A316ACC435008C1623 /* UIDevice+extensions.m */; };
 		007235AF16ACC435008C1623 /* UIDeviceSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 007235A416ACC435008C1623 /* UIDeviceSupport.h */; };
 		007235B016ACC435008C1623 /* UIDeviceSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 007235A416ACC435008C1623 /* UIDeviceSupport.h */; };
-		007235B116ACC435008C1623 /* UIImage+extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 007235A516ACC435008C1623 /* UIImage+extensions.h */; };
-		007235B216ACC435008C1623 /* UIImage+extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 007235A516ACC435008C1623 /* UIImage+extensions.h */; };
-		007235B316ACC435008C1623 /* UIImage+extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 007235A616ACC435008C1623 /* UIImage+extensions.m */; };
-		007235B416ACC435008C1623 /* UIImage+extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 007235A616ACC435008C1623 /* UIImage+extensions.m */; };
+		007235B116ACC435008C1623 /* UIImage+Stretchable.h in Headers */ = {isa = PBXBuildFile; fileRef = 007235A516ACC435008C1623 /* UIImage+Stretchable.h */; };
+		007235B216ACC435008C1623 /* UIImage+Stretchable.h in Headers */ = {isa = PBXBuildFile; fileRef = 007235A516ACC435008C1623 /* UIImage+Stretchable.h */; };
+		007235B316ACC435008C1623 /* UIImage+Stretchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 007235A616ACC435008C1623 /* UIImage+Stretchable.m */; };
+		007235B416ACC435008C1623 /* UIImage+Stretchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 007235A616ACC435008C1623 /* UIImage+Stretchable.m */; };
 		007235B716ACC4F4008C1623 /* NSObject+PerformBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 007235B516ACC4F4008C1623 /* NSObject+PerformBlock.h */; };
 		007235B816ACC4F4008C1623 /* NSObject+PerformBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 007235B516ACC4F4008C1623 /* NSObject+PerformBlock.h */; };
 		007235B916ACC4F4008C1623 /* NSObject+PerformBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 007235B616ACC4F4008C1623 /* NSObject+PerformBlock.m */; };
@@ -128,6 +128,10 @@
 		0082401A14AF993700CEDDEB /* KCNibUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082401814AF993700CEDDEB /* KCNibUtils.m */; };
 		0082402E14AFA78000CEDDEB /* NSIndexPath+Key.h in Headers */ = {isa = PBXBuildFile; fileRef = 0082402C14AFA78000CEDDEB /* NSIndexPath+Key.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0082403014AFA78000CEDDEB /* NSIndexPath+Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082402D14AFA78000CEDDEB /* NSIndexPath+Key.m */; };
+		009A1F6F16B4F611004AF368 /* UIButton+ResizableImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 009A1F6D16B4F611004AF368 /* UIButton+ResizableImage.h */; };
+		009A1F7016B4F611004AF368 /* UIButton+ResizableImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 009A1F6D16B4F611004AF368 /* UIButton+ResizableImage.h */; };
+		009A1F7116B4F611004AF368 /* UIButton+ResizableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 009A1F6E16B4F611004AF368 /* UIButton+ResizableImage.m */; };
+		009A1F7216B4F611004AF368 /* UIButton+ResizableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 009A1F6E16B4F611004AF368 /* UIButton+ResizableImage.m */; };
 		00AC7ABC16AE3CDB006096A9 /* KCInputViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 00AC7ABA16AE3CDB006096A9 /* KCInputViewController.h */; };
 		00AC7ABD16AE3CDB006096A9 /* KCInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC7ABB16AE3CDB006096A9 /* KCInputViewController.m */; };
 /* End PBXBuildFile section */
@@ -180,8 +184,8 @@
 		007235A216ACC435008C1623 /* UIDevice+extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+extensions.h"; sourceTree = "<group>"; };
 		007235A316ACC435008C1623 /* UIDevice+extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+extensions.m"; sourceTree = "<group>"; };
 		007235A416ACC435008C1623 /* UIDeviceSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceSupport.h; sourceTree = "<group>"; };
-		007235A516ACC435008C1623 /* UIImage+extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+extensions.h"; sourceTree = "<group>"; };
-		007235A616ACC435008C1623 /* UIImage+extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+extensions.m"; sourceTree = "<group>"; };
+		007235A516ACC435008C1623 /* UIImage+Stretchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Stretchable.h"; sourceTree = "<group>"; };
+		007235A616ACC435008C1623 /* UIImage+Stretchable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Stretchable.m"; sourceTree = "<group>"; };
 		007235B516ACC4F4008C1623 /* NSObject+PerformBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformBlock.h"; sourceTree = "<group>"; };
 		007235B616ACC4F4008C1623 /* NSObject+PerformBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformBlock.m"; sourceTree = "<group>"; };
 		007235BC16ACC6F9008C1623 /* KCImageDownloadClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCImageDownloadClient.h; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 		0082401814AF993700CEDDEB /* KCNibUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCNibUtils.m; sourceTree = "<group>"; };
 		0082402C14AFA78000CEDDEB /* NSIndexPath+Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSIndexPath+Key.h"; path = "KraCommons/indexpath/NSIndexPath+Key.h"; sourceTree = SOURCE_ROOT; };
 		0082402D14AFA78000CEDDEB /* NSIndexPath+Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSIndexPath+Key.m"; path = "KraCommons/indexpath/NSIndexPath+Key.m"; sourceTree = SOURCE_ROOT; };
+		009A1F6D16B4F611004AF368 /* UIButton+ResizableImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ResizableImage.h"; sourceTree = "<group>"; };
+		009A1F6E16B4F611004AF368 /* UIButton+ResizableImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ResizableImage.m"; sourceTree = "<group>"; };
 		00AC7ABA16AE3CDB006096A9 /* KCInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCInputViewController.h; sourceTree = "<group>"; };
 		00AC7ABB16AE3CDB006096A9 /* KCInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCInputViewController.m; sourceTree = "<group>"; };
 		3EAFE647252A4D08BDEEEE56 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -406,13 +412,15 @@
 		0072359F16ACC435008C1623 /* UIKit Categories */ = {
 			isa = PBXGroup;
 			children = (
+				009A1F6D16B4F611004AF368 /* UIButton+ResizableImage.h */,
+				009A1F6E16B4F611004AF368 /* UIButton+ResizableImage.m */,
 				007235A016ACC435008C1623 /* UIColor+extensions.h */,
 				007235A116ACC435008C1623 /* UIColor+extensions.m */,
 				007235A216ACC435008C1623 /* UIDevice+extensions.h */,
 				007235A316ACC435008C1623 /* UIDevice+extensions.m */,
 				007235A416ACC435008C1623 /* UIDeviceSupport.h */,
-				007235A516ACC435008C1623 /* UIImage+extensions.h */,
-				007235A616ACC435008C1623 /* UIImage+extensions.m */,
+				007235A516ACC435008C1623 /* UIImage+Stretchable.h */,
+				007235A616ACC435008C1623 /* UIImage+Stretchable.m */,
 				007236F816AD4857008C1623 /* UITableView+NibRegistration.h */,
 				007236F916AD4857008C1623 /* UITableView+NibRegistration.m */,
 				0000C0BB16AE36950009BE81 /* UIView+FirstResponder.h */,
@@ -515,7 +523,7 @@
 				007235A816ACC435008C1623 /* UIColor+extensions.h in Headers */,
 				007235AC16ACC435008C1623 /* UIDevice+extensions.h in Headers */,
 				007235B016ACC435008C1623 /* UIDeviceSupport.h in Headers */,
-				007235B216ACC435008C1623 /* UIImage+extensions.h in Headers */,
+				007235B216ACC435008C1623 /* UIImage+Stretchable.h in Headers */,
 				007235B816ACC4F4008C1623 /* NSObject+PerformBlock.h in Headers */,
 				007235C516ACC6F9008C1623 /* KCImageDownloadClient.h in Headers */,
 				007235C916ACC6F9008C1623 /* KCImageService.h in Headers */,
@@ -529,6 +537,7 @@
 				0000C0BD16AE36950009BE81 /* UIView+FirstResponder.h in Headers */,
 				00AC7ABC16AE3CDB006096A9 /* KCInputViewController.h in Headers */,
 				0069FB8016B4B242001CF155 /* KCViewDequeuer.h in Headers */,
+				009A1F7016B4F611004AF368 /* UIButton+ResizableImage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +563,7 @@
 				007235A716ACC435008C1623 /* UIColor+extensions.h in Headers */,
 				007235AB16ACC435008C1623 /* UIDevice+extensions.h in Headers */,
 				007235AF16ACC435008C1623 /* UIDeviceSupport.h in Headers */,
-				007235B116ACC435008C1623 /* UIImage+extensions.h in Headers */,
+				007235B116ACC435008C1623 /* UIImage+Stretchable.h in Headers */,
 				007235B716ACC4F4008C1623 /* NSObject+PerformBlock.h in Headers */,
 				007235C416ACC6F9008C1623 /* KCImageDownloadClient.h in Headers */,
 				007235C816ACC6F9008C1623 /* KCImageService.h in Headers */,
@@ -562,6 +571,7 @@
 				007235D016ACC6F9008C1623 /* KCWebRequestOperation.h in Headers */,
 				007235D716ACC78E008C1623 /* KCGlobalConfiguration.h in Headers */,
 				0069FB7F16B4B242001CF155 /* KCViewDequeuer.h in Headers */,
+				009A1F6F16B4F611004AF368 /* UIButton+ResizableImage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,7 +693,7 @@
 				0072359E16ACC425008C1623 /* NSString+URLEncoding.m in Sources */,
 				007235AA16ACC435008C1623 /* UIColor+extensions.m in Sources */,
 				007235AE16ACC435008C1623 /* UIDevice+extensions.m in Sources */,
-				007235B416ACC435008C1623 /* UIImage+extensions.m in Sources */,
+				007235B416ACC435008C1623 /* UIImage+Stretchable.m in Sources */,
 				007235BA16ACC4F4008C1623 /* NSObject+PerformBlock.m in Sources */,
 				007235C716ACC6F9008C1623 /* KCImageDownloadClient.m in Sources */,
 				007235CB16ACC6F9008C1623 /* KCImageService.m in Sources */,
@@ -697,6 +707,7 @@
 				0000C0BE16AE36950009BE81 /* UIView+FirstResponder.m in Sources */,
 				00AC7ABD16AE3CDB006096A9 /* KCInputViewController.m in Sources */,
 				0069FB8216B4B242001CF155 /* KCViewDequeuer.m in Sources */,
+				009A1F7216B4F611004AF368 /* UIButton+ResizableImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,7 +733,7 @@
 				0072359D16ACC425008C1623 /* NSString+URLEncoding.m in Sources */,
 				007235A916ACC435008C1623 /* UIColor+extensions.m in Sources */,
 				007235AD16ACC435008C1623 /* UIDevice+extensions.m in Sources */,
-				007235B316ACC435008C1623 /* UIImage+extensions.m in Sources */,
+				007235B316ACC435008C1623 /* UIImage+Stretchable.m in Sources */,
 				007235B916ACC4F4008C1623 /* NSObject+PerformBlock.m in Sources */,
 				007235C616ACC6F9008C1623 /* KCImageDownloadClient.m in Sources */,
 				007235CA16ACC6F9008C1623 /* KCImageService.m in Sources */,
@@ -731,6 +742,7 @@
 				007235D916ACC78E008C1623 /* KCGlobalConfiguration.m in Sources */,
 				0069FB0816B3CD57001CF155 /* KCInputViewController.m in Sources */,
 				0069FB8116B4B242001CF155 /* KCViewDequeuer.m in Sources */,
+				009A1F7116B4F611004AF368 /* UIButton+ResizableImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

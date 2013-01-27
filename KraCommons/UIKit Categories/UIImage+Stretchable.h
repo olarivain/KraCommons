@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (UIImage_extensions)
+@interface UIImage (Stretchable)
 - (UIImage *)stretchableImageWithDefaultCaps;
 @end
 #endif
