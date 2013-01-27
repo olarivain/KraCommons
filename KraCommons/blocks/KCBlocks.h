@@ -8,9 +8,10 @@
 
 typedef void(^KCVoidBlock)(void);
 typedef void(^KCIntegerBlock)(NSInteger result);
+typedef void(^KCBooleanBlock)(BOOL boolean);
 
 // nserror block
-typedef void(^KCErrorBlock)(NSError *);
+typedef void(^KCErrorBlock)(NSError *error);
 
 #define DispatchMainThread(block, ...) if(block) dispatch_async(dispatch_get_main_queue(), ^{ block(__VA_ARGS__); })
 #define InvokeBlock(block, ...) if(block) block(__VA_ARGS__)
