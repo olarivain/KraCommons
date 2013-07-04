@@ -1,6 +1,6 @@
 platform :osx, "10.7"
 
-pod "AFNetworking", "~> 1.1.0"
+pod "AFNetworking", "~> 1.3.0"
 pod "CocoaLumberjack", "~> 1.6"
 
 target :KraCommonsx86 do
