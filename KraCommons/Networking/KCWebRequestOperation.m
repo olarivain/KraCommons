@@ -53,7 +53,7 @@ static dispatch_queue_t networkRequestCallbackQueue;
 			}
 			
 			// we have a hard error (i.e. physical network layer, bad content type or other)
-			if (self.error) {
+			if (blockSelf.error) {
 				// invoke the failure block right here, right now
 				InvokeBlock(failure, blockSelf, blockSelf.error);
 				return;
